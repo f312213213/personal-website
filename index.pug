@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+<!-- Created by David on 6/8/2021 -->
+
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Hi, I'm David</title>
+<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    header
+        .logo
+            a(href="#hi").hi
+                h4 David
+        nav
+            ul.nav_links
+                li
+                    a(href="#hi").hi Hi!
+                li
+                    a(href="#about").about About
+                li
+                    a(href="#skill").skill skills
+                li
+                    a(href="#contact").cta
+                        button CONTACT
+                li
+                    .button-link.inside
+                        ul
+                            li
+                                a(href="https://www.facebook.com/Yi.0419/" target="_blank")
+                                    i.fab.fa-facebook-square
+                            li
+                                a(href="https://www.linkedin.com/in/davidchien419/" target="_blank")
+                                    i.fab.fa-linkedin
+                            li
+                                a(href="https://www.instagram.com/yeeggg_/" target="_blank")
+                                    i.fab.fa-instagram-square
+        .burger
+            .line1
+            .line2
+            .line3
+    .button-link.outside
+        ul
+            li
+                a(href="https://www.facebook.com/Yi.0419/" target="_blank")
+                    i.fab.fa-facebook-square
+            li
+                a(href="https://www.linkedin.com/in/davidchien419/" target="_blank")
+                    i.fab.fa-linkedin
+            li
+                a(href="https://www.instagram.com/yeeggg_/" target="_blank")
+                    i.fab.fa-instagram-square
+
+    main
+        section#hi
+            h1.intro Hi!<br>I'm David.
+            h1.intro A student in National Taipei University.<br>Crazy about web development and playing drums!
+            h1.intro More details below!
+        section#about
+            .container
+                .row
+                    .col-md-6.col-sm-12
+                        h1.about-me More<br>About me ...
+                    .col-md-6.col-sm-12(data-aos="flip-right" data-aos-duration="1000")
+                        p.details I'm a 20 years old student, I am highly motivated and very imaginative by finding inspirations in everyday things, pushing my own boundaries and allowing myself to think out of the box.
+                        p.details#details <br>Currently, I'm learning about full stack development and building website on cloud.
+
+        section#skill
+            h1.skills(data-aos="fade-up" data-aos-duration="1000") My Skills...
+            .container.skill-group
+                .row
+                    .col-lg-6.col-sm-12 Keep Learning
+                        .wrap
+                            .bar.bar1(value = 100)
+                    .col-lg-6.col-sm-12 python
+                        .wrap
+                            .bar.bar2(value = 70)
+                    .col-lg-6.col-sm-12 web development
+                        .wrap
+                            .bar.bar3(value = 60)
+                    .col-lg-6.col-sm-12 C / C++
+                        .wrap
+                            .bar.bar4(value = 60)
+        section#contact
+            h1.contact Let's Collab...
+            .container
+                .row
+                    .col-lg-6.col-sm-12
+                        p Fill up the form<br>So I can reach you!
+                    .col-lg-6.col-sm-12
+                        form#getform
+                            input(name="Name" type="text" placeholder="Name" required)#id_Name
+                            input(name="Email" type="text" placeholder="Email" required)#id_Email
+                            textarea(name="Message" cols="41" rows="5" placeholder="Message" required)#id_Message
+                            #feedback
+                            button(type="submit").submit SUBMIT
+        footer
+            .copyright
+                p &copy; Copyright <strong>David Chien</strong>.<br>All Rights Reserved 2021
+
+
+
+
+
+
+
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://kit.fontawesome.com/a020467bc6.js" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script type=“text/javascript” src=“https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="script.js"></script>
+<script> AOS.init(); </script>
+
+</body>
+</html>
