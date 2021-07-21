@@ -95,6 +95,27 @@
     margin-left: -15px;
   }
 }
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 33vh;
+  background-color: #0088a9;
+  z-index: 9999;
+}
+
+.cover1 {
+  top: 0;
+}
+
+.cover2 {
+  top: 33vh;
+}
+
+.cover3 {
+  height: 34vh;
+  top: 66vh;
+}
+
 body {
   background-color: #232425;
   position: relative;
@@ -215,10 +236,9 @@ main {
 }
 
 #hi {
+  overflow: hidden;
   padding-top: 20vh;
   min-height: 90vh;
-  transform: translateY(100%);
-  transition: 2s ease;
 }
 
 .intro {
@@ -279,6 +299,7 @@ main {
   background-color: #0088a9;
   height: 7px;
   border-radius: 5px;
+  width: 0;
 }
 
 #contact {

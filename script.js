@@ -1,7 +1,20 @@
 $(document).ready(function () {
-    $('#hi').css('transform', 'translateY(0%)')
-    window.scrollTo(0, 0);
+    const cover1 = $('.cover1')
+    const cover2 = $('.cover2')
+    const cover3 = $('.cover3')
+    const header = $('header')
+    const outside = $('.outside')
+    const hi = $('.wrapper')
+    const timeLine = new TimelineMax()
+    timeLine.fromTo(cover1, 0.3, {width: '100%'}, {width: '0%'})
+        .fromTo(cover2, 0.3, {width: '100%'}, {width: '0%'})
+        .fromTo(cover3, 0.3, {width: '100%'}, {width: '0%'})
+        .fromTo(header,0.5, {x: '-100%'}, {x: '0%'})
+        .fromTo(hi, 2, {y: '150%'}, {y: '0%'})
+        .fromTo(outside, 2, {y: '250%'}, {y: '0%'},"-=2" )
 })
+
+
 
 
 $('.burger').click(() => {
@@ -38,45 +51,20 @@ $('.cta').click((event) => {
 var waypoint = new Waypoint({
     element: document.getElementById('details'),
     handler: (function () {
-        let percent1 = 0
-        let percent2 = 0
-        let percent3 = 0
-        let percent4 = 0
-        let grow1 = setInterval(function () {
-            $(".bar1").css("width", percent1 + "%")
-            percent1 += 1
-            if (percent1 > $(".bar1").attr('value')) {
-                clearInterval(grow1)
-            }
-        }, 30)
+        const bar1 = $('.bar1')
+        const bar2 = $('.bar2')
+        const bar3 = $('.bar3')
+        const bar4 = $('.bar4')
+        const bar1Value = bar1.attr('value')
+        const bar2Value = bar2.attr('value')
+        const bar3Value = bar3.attr('value')
+        const bar4Value = bar4.attr('value')
+        const timeLine = new TimelineMax()
+        timeLine.fromTo(bar1, 2, {width: '0%'}, {width: bar1Value+"%"})
+            .fromTo(bar2, 2, {width: '0%'}, {width: bar2Value+"%"}, "-=1.5")
+            .fromTo(bar3, 2, {width: '0%'}, {width: bar3Value+"%"}, "-=1.5")
+            .fromTo(bar4, 2, {width: '0%'}, {width: bar4Value+"%"}, "-=1.5")
 
-        let grow2 = setInterval(function () {
-            $(".bar2").css("width", percent2 + "%")
-            percent2 += 1
-            if (percent2 > $(".bar2").attr('value')) {
-                clearInterval(grow2)
-            }
-        }, 30)
-
-
-        let grow3 = setInterval(function () {
-
-            $(".bar3").css("width", percent3 + "%")
-            percent3 += 1
-            if (percent3 > $(".bar3").attr('value')) {
-                clearInterval(grow3)
-            }
-        }, 30)
-
-
-        let grow4 = setInterval(function () {
-
-            $(".bar4").css("width", percent4 + "%")
-            percent4 += 1
-            if (percent4 > $(".bar4").attr('value')) {
-                clearInterval(grow4)
-            }
-        }, 30)
     })
 })
 

@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    .cover.cover1
+    .cover.cover2
+    .cover.cover3
     header
         .logo
             a(href="#hi").hi
@@ -25,6 +28,8 @@
                     a(href="#about").about About
                 li
                     a(href="#skill").skill skills
+                li
+                    a(href="/works").work works
                 li
                     a(href="#contact").cta
                         button CONTACT
@@ -58,20 +63,21 @@
 
     main
         section#hi
-            h1.intro Hi!<br>I'm David.
-            h1.intro A student in National Taipei University.<br>Crazy about web development and playing drums!
-            h1.intro More details below!
+            .wrapper
+                h1.intro Hi!<br>I'm David.
+                h1.intro A student in National Taipei University.<br>Crazy about web development and playing drums!
+                h1.intro More details below!
         section#about
             .container
                 .row
                     .col-md-6.col-sm-12
                         h1.about-me More<br>About me ...
-                    .col-md-6.col-sm-12(data-aos="flip-right" data-aos-duration="1000")
+                    .col-md-6.col-sm-12
                         p.details I'm a 20 years old student, I am highly motivated and very imaginative by finding inspirations in everyday things, pushing my own boundaries and allowing myself to think out of the box.
                         p.details#details <br>Currently, I'm learning about full stack development and building website on cloud.
 
         section#skill
-            h1.skills(data-aos="fade-up" data-aos-duration="1000") My Skills...
+            h1.skills My Skills...
             .container.skill-group
                 .row
                     .col-lg-6.col-sm-12 Keep Learning
@@ -110,6 +116,8 @@
 
 
 <!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://kit.fontawesome.com/a020467bc6.js" crossorigin="anonymous"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>

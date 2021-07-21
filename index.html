@@ -1,21 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-<!-- Created by David on 6/8/2021 -->
-<meta charset="UTF-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Hi, I'm David</title>
-<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+    <!-- Created by David on 6/8/2021 -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Hi, I'm David</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body><header><div class="logo"><a class="hi" href="#hi"><h4>David</h4></a></div><nav><ul class="nav_links"><li><a class="hi" href="#hi">Hi!</a></li><li><a class="about" href="#about">About</a></li><li><a class="skill" href="#skill">skills</a></li><li><a class="cta" href="#contact"><button>CONTACT</button></a></li><li><div class="button-link inside"><ul><li><a href="https://www.facebook.com/Yi.0419/" target="_blank"><i class="fab fa-facebook-square"></i></a></li><li><a href="https://www.linkedin.com/in/davidchien419/" target="_blank"><i class="fab fa-linkedin"></i></a></li><li><a href="https://www.instagram.com/yeeggg_/" target="_blank"><i class="fab fa-instagram-square"></i></a></li></ul></div></li></ul></nav><div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></header><div class="button-link outside"><ul><li><a href="https://www.facebook.com/Yi.0419/" target="_blank"><i class="fab fa-facebook-square"></i></a></li><li><a href="https://www.linkedin.com/in/davidchien419/" target="_blank"><i class="fab fa-linkedin"></i></a></li><li><a href="https://www.instagram.com/yeeggg_/" target="_blank"><i class="fab fa-instagram-square"></i></a></li></ul></div><main><section id="hi"><h1 class="intro">Hi!<br>I'm David.</h1><h1 class="intro">A student in National Taipei University.<br>Crazy about web development and playing drums!</h1><h1 class="intro">More details below!</h1></section><section id="about"><div class="container"><div class="row"><div class="col-md-6 col-sm-12"><h1 class="about-me">More<br>About me ...</h1></div><div class="col-md-6 col-sm-12" data-aos="flip-right" data-aos-duration="1000"><p class="details">I'm a 20 years old student, I am highly motivated and very imaginative by finding inspirations in everyday things, pushing my own boundaries and allowing myself to think out of the box.</p><p class="details" id="details"><br>Currently, I'm learning about full stack development and building website on cloud.</p></div></div></div></section><section id="skill"><h1 class="skills" data-aos="fade-up" data-aos-duration="1000">My Skills...</h1><div class="container skill-group"><div class="row"><div class="col-lg-6 col-sm-12">Keep Learning<div class="wrap"><div class="bar bar1" value="100"></div></div></div><div class="col-lg-6 col-sm-12">python<div class="wrap"><div class="bar bar2" value="70"></div></div></div><div class="col-lg-6 col-sm-12">web development<div class="wrap"><div class="bar bar3" value="60"></div></div></div><div class="col-lg-6 col-sm-12">C / C++<div class="wrap"><div class="bar bar4" value="60"></div></div></div></div></div></section><section id="contact"><h1 class="contact">Let's Collab...</h1><div class="container"><div class="row"><div class="col-lg-6 col-sm-12"><p>Fill up the form<br>So I can reach you!</p></div><div class="col-lg-6 col-sm-12"><form id="getform"><input name="Name" type="text" placeholder="Name" required="required" id="id_Name"/><input name="Email" type="text" placeholder="Email" required="required" id="id_Email"/><textarea name="Message" cols="41" rows="5" placeholder="Message" required="required" id="id_Message"></textarea><div id="feedback"></div><button class="submit" type="submit">SUBMIT</button></form></div></div></div></section><footer><div class="copyright"><p>&copy; Copyright <strong>David Chien</strong>.<br>All Rights Reserved 2021</p></div></footer></main><!-- script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<body>
+<div class="cover cover1"></div>
+<div class="cover cover2"></div>
+<div class="cover cover3"></div>
+<header>
+    <div class="logo"><a class="hi" href="#hi"><h4>David</h4></a></div>
+    <nav>
+        <ul class="nav_links">
+            <li><a class="hi" href="#hi">Hi!</a></li>
+            <li><a class="about" href="#about">About</a></li>
+            <li><a class="skill" href="#skill">skills</a></li>
+            <li><a class="work" href="/works">works</a></li>
+            <li><a class="cta" href="#contact">
+                <button>CONTACT</button>
+            </a></li>
+            <li>
+                <div class="button-link inside">
+                    <ul>
+                        <li><a href="https://www.facebook.com/Yi.0419/" target="_blank"><i
+                                class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/davidchien419/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/yeeggg_/" target="_blank"><i
+                                class="fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</header>
+<div class="button-link outside">
+    <ul>
+        <li><a href="https://www.facebook.com/Yi.0419/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/davidchien419/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li><a href="https://www.instagram.com/yeeggg_/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </li>
+    </ul>
+</div>
+<main>
+    <section id="hi">
+        <div class="wrapper"><h1 class="intro">Hi!<br>I'm David.</h1>
+            <h1 class="intro">A student in National Taipei University.<br>Crazy about web development and playing drums!
+            </h1>
+            <h1 class="intro">More details below!</h1></div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12"><h1 class="about-me">More<br>About me ...</h1></div>
+                <div class="col-md-6 col-sm-12"><p class="details">I'm a 20 years old student, I am highly motivated and
+                    very imaginative by finding inspirations in everyday things, pushing my own boundaries and allowing
+                    myself to think out of the box.</p>
+                    <p class="details" id="details"><br>Currently, I'm learning about full stack development and
+                        building website on cloud.</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="skill"><h1 class="skills">My Skills...</h1>
+        <div class="container skill-group">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">Keep Learning
+                    <div class="wrap">
+                        <div class="bar bar1" value="100"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">python
+                    <div class="wrap">
+                        <div class="bar bar2" value="70"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">web development
+                    <div class="wrap">
+                        <div class="bar bar3" value="60"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">C / C++
+                    <div class="wrap">
+                        <div class="bar bar4" value="60"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact"><h1 class="contact">Let's Collab...</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12"><p>Fill up the form<br>So I can reach you!</p></div>
+                <div class="col-lg-6 col-sm-12">
+                    <form id="getform"><input name="Name" type="text" placeholder="Name" required="required"
+                                              id="id_Name"/><input name="Email" type="text" placeholder="Email"
+                                                                   required="required" id="id_Email"/><textarea
+                            name="Message" cols="41" rows="5" placeholder="Message" required="required"
+                            id="id_Message"></textarea>
+                        <div id="feedback"></div>
+                        <button class="submit" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright"><p>&copy; Copyright <strong>David Chien</strong>.<br>All Rights Reserved 2021</p></div>
+    </footer>
+</main><!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+        integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://kit.fontawesome.com/a020467bc6.js" crossorigin="anonymous"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 <script type=“text/javascript” src=“https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="script.js"></script>
 <script> AOS.init(); </script>
