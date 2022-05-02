@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Page from '@/components/Page'
 import Link from 'next/link'
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import {AiOutlineArrowDown} from 'react-icons/ai'
+
 import { ContactDialogContext } from "@/context/useContactDialog";
 
 const Home = () => {
@@ -18,12 +19,16 @@ const Home = () => {
       </div>
       <div className={'mt-8 flex flex-col space-y-8 justify-center items-center'}>
         <p className={'text-black opacity-70 dark:text-gray-50'}>
-          I am a self-motivated student in CS area seeking for an intern position, hoping to learn more about web or software development in real business production
+          I am a self-motivated student in CS area, seeking for an intern position, hoping to learn more about web or software development in real business production
         </p>
         <Link href={'/about'}>
-          <a className={'bg-black text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
+          <a className={'bg-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
             More About Me
-            <AiOutlineArrowRight />
+            <div className={'animate-bounce ml-2'}>
+              <div className={'transform -rotate-90'}>
+                <AiOutlineArrowDown />
+              </div>
+            </div>
           </a>
         </Link>
       </div>
