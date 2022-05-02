@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Footer from '@/components/Footer'
 
 const Page = ({ children, ...customMeta }) => {
   const router = useRouter()
@@ -40,9 +39,10 @@ const Page = ({ children, ...customMeta }) => {
               <meta property="article:published_time" content={meta.date} />
           )}
         </Head>
-        <main className={'min-h-screen w-full relative'}>
-          <div>{children}</div>
-          <Footer />
+        <main className={'min-h-screen w-full relative flex justify-center text-center'}>
+          <div className={'sm:w-2/5 w-4/5'}>
+            {children}
+          </div>
         </main>
       </>
   )
