@@ -32,15 +32,15 @@ const About = () => {
             Technologies I frequently use
           </h2>
           <div className={'grid grid-cols-3 w-full mt-20 gap-6 gap-y-12'}>
-            <TechLink link={'https://reactjs.org/'} icon={<FaReact />} />
-            <TechLink link={'https://firebase.google.com/'} icon={<SiFirebase />} />
-            <TechLink link={'https://nextjs.org/'} icon={<SiNextdotjs />} />
-            <TechLink link={'https://www.atlassian.com/software/jira'} icon={<SiJira />} />
-            <TechLink link={'https://cloud.google.com/'} icon={<MdOutlineCloudQueue />} />
-            <TechLink link={'https://tailwindcss.com/'} icon={<SiTailwindcss />} />
-            <TechLink link={'https://www.python.org/'} icon={<SiPython />} />
-            <TechLink link={'https://www.javascript.com/'} icon={<SiJavascript />} />
-            <TechLink link={'https://www.jetbrains.com/'} icon={<SiJetbrains />} />
+            <TechLink link={'https://reactjs.org/'} icon={<FaReact />} text={'React.js'} position={'bottom'} />
+            <TechLink link={'https://firebase.google.com/'} icon={<SiFirebase />} text={'Firebase'} position={'bottom'} />
+            <TechLink link={'https://nextjs.org/'} icon={<SiNextdotjs />} text={'Next.js'} position={'bottom'} />
+            <TechLink link={'https://www.atlassian.com/software/jira'} icon={<SiJira />} text={'Jira'} position={'bottom'} />
+            <TechLink link={'https://cloud.google.com/'} icon={<MdOutlineCloudQueue />} text={'GCP'} position={'bottom'} />
+            <TechLink link={'https://tailwindcss.com/'} icon={<SiTailwindcss />} text={'Tailwind.css'} position={'bottom'} />
+            <TechLink link={'https://www.python.org/'} icon={<SiPython />} text={'Python'} position={'top'} />
+            <TechLink link={'https://www.javascript.com/'} icon={<SiJavascript />} text={'Javascript'} position={'top'} />
+            <TechLink link={'https://www.jetbrains.com/'} icon={<SiJetbrains />} text={'Jetbrains'} position={'top'} />
           </div>
         </div>
 

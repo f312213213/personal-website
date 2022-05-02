@@ -19,7 +19,7 @@ const Footer = () => {
               <AiFillLinkedin />
             </a>
           </Link>
-          <button onClick={toggleContactDialog}>
+          <button onClick={toggleContactDialog} className={'shadow-none'}>
             <AiFillMail />
           </button>
           <Link href={'https://instagram.com/yeeggg_'}>

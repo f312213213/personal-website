@@ -14,6 +14,15 @@ const Navbar = () => {
     setShowNav(false)
     toggleContactDialog()
   }
+
+  React.useEffect(() => {
+    if (showNav) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [showNav])
+
   return (
       <>
         <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex dark:bg-[#121212]'}>
@@ -29,11 +38,11 @@ const Navbar = () => {
               <NavLink text={'Projects'} path={'/projects'} />
             </div>
           </div>
-          <button onClick={toggleContactDialog}>
+          <button onClick={toggleContactDialog} className={'shadow-none'}>
             Contact
           </button>
         </nav>
-        <button className={'absolute p-6 text-2xl z-50 sm:hidden'} onClick={() => setShowNav(!showNav)}>
+        <button className={'absolute p-6 text-2xl z-50 sm:hidden shadow-none'} onClick={() => setShowNav(!showNav)}>
           <FaHamburger />
         </button>
         <div className={`block md:hidden h-screen w-full bg-white fixed transition z-20 dark:bg-[#121212] ${showNav ? 'scale-100' : 'scale-0'}`}>

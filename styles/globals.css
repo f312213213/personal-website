@@ -17,3 +17,15 @@ body {
 .hide {
     @apply hidden
 }
+
+.top {
+    @apply bottom-20
+}
+
+.bottom {
+    @apply top-20
+}
+
+button {
+    @apply shadow-xl
+}
