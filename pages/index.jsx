@@ -2,10 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import Page from '@/components/Page'
 
-export default function Home () {
+const Home = () => {
   return (
     <Page>
       hihi
     </Page>
   )
 }
+
+export default Home
