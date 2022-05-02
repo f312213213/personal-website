@@ -22,7 +22,7 @@ const Home = () => {
           I am a self-motivated student in CS area, seeking for an intern position, hoping to learn more about web or software development in real business production
         </p>
         <Link href={'/about'}>
-          <a className={'bg-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
+          <a className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
             More About Me
             <div className={'animate-bounce ml-2'}>
               <div className={'transform -rotate-90'}>
@@ -39,7 +39,7 @@ const Home = () => {
         <p className={'text-black opacity-70 dark:text-gray-50'}>
           My inbox is always open for you. Feel free to ask me anything!
         </p>
-        <button className={'bg-black  text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'} onClick={toggleContactDialog}>
+        <button className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'} onClick={toggleContactDialog}>
           <span className={'animate-bounce mr-4'}>
            👋
           </span>

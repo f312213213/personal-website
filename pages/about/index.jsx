@@ -19,11 +19,11 @@ const About = () => {
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             During my free time I like going gym, doing Bench Press. You can also find some cool music festival live on my <a
-              href="https://www.instagram.com/yeeggg_/" className={'font-bold'}>Instagram</a>.
+              href="https://www.instagram.com/yeeggg_/" target={'_blank'} className={'font-bold'} rel="noreferrer">Instagram</a>.
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
-            You can also find my cv when you click  <a
-              href="https://file.chiendavid.com/cv.pdf" className={'font-bold'}>me</a>.
+            You can also find my cv when you click  <a target={'_blank'}
+              href="https://file.chiendavid.com/cv.pdf" className={'font-bold'} rel="noreferrer">me</a>.
           </p>
         </div>
 
