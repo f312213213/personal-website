@@ -24,15 +24,15 @@ const Home = () => {
         <Link href={'/about'}>
           <a className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
             More About Me
-            <div className={'animate-bounce ml-2'}>
-              <div className={'transform -rotate-90'}>
+            <div className={'-rotate-90'}>
+              <div className={'animate-bounce mt-2'}>
                 <AiOutlineArrowDown />
               </div>
             </div>
           </a>
         </Link>
       </div>
-      <div className={'mt-52 flex flex-col space-y-8 justify-center items-center mb-16'}>
+      <div className={'mt-36 sm:mt-44 flex flex-col space-y-8 justify-center items-center mb-16'}>
         <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
           Get In Touch
         </h2>
