@@ -27,8 +27,8 @@ const Projects = ({repos}) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10 sm:gap-y-20">
           {
-            repos && repos.map((latestRepo, idx) => (
-                  <GithubRepoCard latestRepo={latestRepo} key={idx} />
+            repos && repos.map((latestRepo) => (
+                  <GithubRepoCard latestRepo={latestRepo} key={latestRepo.id} />
               ))
           }
         </div>
@@ -38,21 +38,20 @@ const Projects = ({repos}) => {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-      <div className="w-full flex flex-col h-full border-2 p-4 rounded-xl">
+      <a
+          href={latestRepo.svn_url}
+          target={'_blank'}
+          className="w-full flex flex-col h-full border-2 p-4 rounded-xl">
         <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-700 text-left">
           {latestRepo.name}
         </h1>
-        <a
-            href={latestRepo.clone_url}
-            target={'_blank'}
-            className="font-semibold group flex flex-row space-x-2 w-full items-center items-end"
-        >
+        <div className="font-semibold group flex flex-row space-x-2 w-full items-center items-end">
           <p>View Repository </p>
           <div className="transform  group-hover:translate-x-2 transition duration-300">
             &rarr;
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
   );
 };
 
