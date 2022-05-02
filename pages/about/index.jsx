@@ -9,7 +9,7 @@ import ExperienceRow from '@/components/ExperienceRow'
 
 const About = () => {
   return (
-      <Page title={'About - David'}>
+      <Page title={'About - David'} description={'I\'m a student and frontend developer living in Taipei.'}>
         <div className={'mt-20 flex flex-col space-y-8 justify-center mb-16'}>
           <h1 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Student and passionate
