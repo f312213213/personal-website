@@ -36,7 +36,7 @@ const Navbar = () => {
         <button className={'absolute p-6 text-2xl z-50 sm:hidden'} onClick={() => setShowNav(!showNav)}>
           <FaHamburger />
         </button>
-        <div className={`block md:hidden h-screen w-full dark:bg-black bg-white fixed transition z-20 dark:bg-[#121212] ${showNav ? 'scale-100' : 'scale-0'}`}>
+        <div className={`block md:hidden h-screen w-full bg-white fixed transition z-20 dark:bg-[#121212] ${showNav ? 'scale-100' : 'scale-0'}`}>
           <div className={'flex flex-col text-2xl justify-center items-center mt-4 h-full dark:text-gray-50 space-y-3'}>
               <Link href={'/'}>
                 <a onClick={() => setShowNav(false)}>
