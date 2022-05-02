@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 const Page = ({ children, ...customMeta }) => {
