@@ -11,7 +11,7 @@ const ToggleDarkMode = () => {
   }, [])
   return (
       <button
-          className={'fixed rounded-full p-4 bottom-4 right-4 text-2xl text-yellow-400 dark:bg-gray-50 bg-black'}
+          className={'fixed hidden sm:block rounded-full p-4 bottom-4 right-4 text-2xl text-yellow-400 dark:bg-gray-50 bg-black'}
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {
