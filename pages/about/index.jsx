@@ -1,11 +1,11 @@
 import React from 'react'
-import {FaReact} from 'react-icons/fa'
-import {SiFirebase, SiNextdotjs, SiJira, SiTailwindcss, SiPython, SiJavascript, SiJetbrains} from 'react-icons/si'
-import {MdOutlineCloudQueue} from 'react-icons/md'
+import { FaReact } from 'react-icons/fa'
+import { SiFirebase, SiNextdotjs, SiJira, SiTailwindcss, SiPython, SiJavascript, SiJetbrains } from 'react-icons/si'
+import { MdOutlineCloudQueue } from 'react-icons/md'
 
 import Page from '@/components/Page'
-import TechLink from "@/components/TechLink";
-import ExperienceRow from "@/components/ExperienceRow";
+import TechLink from '@/components/TechLink'
+import ExperienceRow from '@/components/ExperienceRow'
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
             Student and passionate
           </h1>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
-            I'm a student and frontend developer living in Taipei.
+            I&apos;m a student and frontend developer living in Taipei.
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             During my free time I like going gym, doing Bench Press. You can also find some cool music festival live on my <a
@@ -43,7 +43,6 @@ const About = () => {
             <TechLink link={'https://www.jetbrains.com/'} icon={<SiJetbrains />} />
           </div>
         </div>
-
 
         <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>

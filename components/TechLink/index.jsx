@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from "next/link";
+import Link from 'next/link'
 
-const TechLink = ({link, icon}) => {
+const TechLink = ({ link, icon }) => {
   return (
       <Link href={link}>
         <a target={'_blank'} className={'w-full text-5xl flex justify-center items-center'}>

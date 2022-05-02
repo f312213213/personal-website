@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ExperienceRow = ({companyName, timeLine, description}) => {
+const ExperienceRow = ({ companyName, timeLine, description }) => {
   return (
       <div className={'py-6'}>
         <div className={'flex justify-items-start items-center'}>

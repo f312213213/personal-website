@@ -1,9 +1,9 @@
 import React from 'react'
 import Page from '@/components/Page'
-import { AiOutlineArrowDown } from "react-icons/ai";
-import Link from "next/link";
+import { AiOutlineArrowDown } from 'react-icons/ai'
+import Link from 'next/link'
 
-const Projects = ({repos}) => {
+const Projects = ({ repos }) => {
   return (
       <Page title={'Projects - David'}>
         <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
@@ -11,7 +11,7 @@ const Projects = ({repos}) => {
             Latest Code
           </h2>
           <p className={'text-black opacity-70 dark:text-gray-50'}>
-            I'm always working on new projects.
+            I&apos;m always working on new projects.
           </p>
           <Link href={'https://github.com/f312213213'}>
             <a target={'_blank'} className={'bg-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
@@ -29,7 +29,7 @@ const Projects = ({repos}) => {
           {
             repos && repos.map((latestRepo) => (
                   <GithubRepoCard latestRepo={latestRepo} key={latestRepo.id} />
-              ))
+            ))
           }
         </div>
       </Page>
@@ -41,7 +41,7 @@ const GithubRepoCard = ({ latestRepo }) => {
       <a
           href={latestRepo.svn_url}
           target={'_blank'}
-          className="w-full flex flex-col h-full border-2 p-4 rounded-xl">
+          className="w-full flex flex-col h-full border-2 p-4 rounded-xl" rel="noreferrer">
         <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-700 text-left">
           {latestRepo.name}
         </h1>
@@ -52,8 +52,8 @@ const GithubRepoCard = ({ latestRepo }) => {
           </div>
         </div>
       </a>
-  );
-};
+  )
+}
 
 export const getServerSideProps = async () => {
   const response = await fetch('https://api.github.com/users/f312213213/repos?per_page=4&sort=pushed&page=1')

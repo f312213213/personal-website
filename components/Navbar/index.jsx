@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import {FaHamburger} from 'react-icons/fa'
+import { FaHamburger } from 'react-icons/fa'
 
 import NavLink from './components/NavLink'
 import { ContactDialogContext } from '@/context/useContactDialog'
-import Footer from "@/components/Footer";
+import Footer from '@/components/Footer'
 
 const Navbar = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
