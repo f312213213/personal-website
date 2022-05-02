@@ -31,16 +31,16 @@ const About = () => {
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>
             Technologies I frequently use
           </h2>
-          <div className={'grid grid-cols-3 w-full mt-20 gap-6 gap-y-12'}>
-            <TechLink link={'https://reactjs.org/'} icon={<FaReact />} text={'React.js'} position={'bottom'} />
-            <TechLink link={'https://firebase.google.com/'} icon={<SiFirebase />} text={'Firebase'} position={'bottom'} />
-            <TechLink link={'https://nextjs.org/'} icon={<SiNextdotjs />} text={'Next.js'} position={'bottom'} />
-            <TechLink link={'https://www.atlassian.com/software/jira'} icon={<SiJira />} text={'Jira'} position={'bottom'} />
-            <TechLink link={'https://cloud.google.com/'} icon={<MdOutlineCloudQueue />} text={'GCP'} position={'bottom'} />
-            <TechLink link={'https://tailwindcss.com/'} icon={<SiTailwindcss />} text={'Tailwind.css'} position={'bottom'} />
-            <TechLink link={'https://www.python.org/'} icon={<SiPython />} text={'Python'} position={'top'} />
-            <TechLink link={'https://www.javascript.com/'} icon={<SiJavascript />} text={'Javascript'} position={'top'} />
-            <TechLink link={'https://www.jetbrains.com/'} icon={<SiJetbrains />} text={'Jetbrains'} position={'top'} />
+          <div className={'grid grid-cols-3 w-full mt-20 gap-6'}>
+            <TechLink link={'https://reactjs.org/'} icon={<FaReact />} text={'React.js'} />
+            <TechLink link={'https://firebase.google.com/'} icon={<SiFirebase />} text={'Firebase'} />
+            <TechLink link={'https://nextjs.org/'} icon={<SiNextdotjs />} text={'Next.js'} />
+            <TechLink link={'https://www.atlassian.com/software/jira'} icon={<SiJira />} text={'Jira'} />
+            <TechLink link={'https://cloud.google.com/'} icon={<MdOutlineCloudQueue />} text={'GCP'} />
+            <TechLink link={'https://tailwindcss.com/'} icon={<SiTailwindcss />} text={'Tailwind.css'} />
+            <TechLink link={'https://www.python.org/'} icon={<SiPython />} text={'Python'} />
+            <TechLink link={'https://www.javascript.com/'} icon={<SiJavascript />} text={'Javascript'} />
+            <TechLink link={'https://www.jetbrains.com/'} icon={<SiJetbrains />} text={'Jetbrains'} />
           </div>
         </div>
 
