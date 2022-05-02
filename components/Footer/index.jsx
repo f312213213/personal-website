@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-      <footer className={'absolute bottom-0 p-5 flex flex-col items-center justify-center w-full text-black dark:text-white opacity-70 text-lg'}>
+      <footer className={' p-5 flex flex-col items-center justify-center w-full text-black dark:text-white opacity-70 text-lg'}>
         <div className={'flex flex-row text-3xl space-x-6 mb-4'}>
           <Link href={'https://github.com/f312213213'}>
             <a target={'_blank'}>

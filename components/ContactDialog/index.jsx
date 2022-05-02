@@ -41,7 +41,6 @@ const Index = () => {
       <div className={`fixed flex justify-center items-center w-full h-screen z-50 bg-gray-300 dark:bg-gray-500 bg-opacity-80 dark:bg-opacity-80 ${!show && 'hide'}`} onClick={handleClick} ref={wrapperRef}>
         <form className="form rounded-lg bg-white dark:bg-gray-700 p-4 flex flex-col shadow-xl">
           <label htmlFor="name" className="text-sm text-gray-600 dark:text-gray-50 mx-4">
-            {' '}
             Your Name
           </label>
           <input

@@ -6,19 +6,20 @@ import Navbar from '@/components/Navbar'
 import ToggleDarkMode from '@/components/ToggleDarkMode'
 import { ContactDialogProvider } from '@/context/useContactDialog'
 import ContactDialog from '@/components/ContactDialog/'
+import Footer from "@/components/Footer";
 
-function MyApp ({ Component, pageProps }) {
+function App ({ Component, pageProps }) {
   return (
       <ThemeProvider enableSystem={true} attribute={'class'}>
         <ContactDialogProvider>
-
           <ContactDialog />
           <Navbar />
           <Component {...pageProps} />
+          <Footer />
           <ToggleDarkMode />
         </ContactDialogProvider>
       </ThemeProvider>
   )
 }
 
-export default MyApp
+export default App
