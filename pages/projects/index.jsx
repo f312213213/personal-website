@@ -14,7 +14,7 @@ const Projects = ({ repos }) => {
             I&apos;m always working on new projects.
           </p>
           <Link href={'https://github.com/f312213213'}>
-            <a target={'_blank'} className={'bg-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
+            <a target={'_blank'} className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
               View my Github
               <div className={'animate-bounce ml-2'}>
                 <div className={'transform -rotate-90'}>

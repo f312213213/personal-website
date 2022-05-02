@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
             <div className={'w-full grid grid-cols-3 gap-6'}>
               <NavLink text={'About'} path={'/about'} />
-              <NavLink text={'Blog'} path={'/blog'} />
+              <NavLink text={'Blog'} path={'https://blog.chiendavid.com/'} newTab />
               <NavLink text={'Projects'} path={'/projects'} />
             </div>
           </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
           <FaHamburger />
         </button>
         <div className={`block md:hidden h-screen w-full dark:bg-black bg-white fixed transition z-40 ${showNav ? 'scale-100' : 'scale-0'}`}>
-          <div className={'flex flex-col justify-center items-center mt-4 h-full dark:text-gray-50'}>
+          <div className={'flex flex-col text-2xl justify-center items-center mt-4 h-full dark:text-gray-50 space-y-3'}>
               <Link href={'/'}>
                 <a onClick={() => setShowNav(false)}>
                   David
@@ -43,8 +43,8 @@ const Navbar = () => {
                   About
                 </a>
               </Link>
-              <Link href={'/blog'}>
-                <a onClick={() => setShowNav(false)}>
+              <Link href={'https://blog.chiendavid.com/'}>
+                <a target={'_blank'} onClick={() => setShowNav(false)}>
                   Blog
                 </a>
               </Link>
@@ -56,6 +56,12 @@ const Navbar = () => {
             <div className={'items-end'} onClick={() => setShowNav(false)}>
               <Footer />
             </div>
+            <button className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'} onClick={toggleContactDialog}>
+              <span className={'animate-bounce mr-4'}>
+               👋
+              </span>
+              Contact me
+            </button>
           </div>
         </div>
       </>
