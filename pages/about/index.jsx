@@ -14,14 +14,14 @@ const About = () => {
           <h1 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Student and passionate
           </h1>
-          <p className={'text-black opacity-70 dark:text-gray-50 text-left'}>
+          <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             I'm a student and frontend developer living in Taipei.
           </p>
-          <p className={'text-black opacity-70 dark:text-gray-50 text-left'}>
+          <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             During my free time I like going gym, doing Bench Press. You can also find some cool music festival live on my <a
               href="https://www.instagram.com/yeeggg_/" className={'font-bold'}>Instagram</a>.
           </p>
-          <p className={'text-black opacity-70 dark:text-gray-50 text-left'}>
+          <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             You can also find my cv when you click  <a
               href="https://file.chiendavid.com/cv.pdf" className={'font-bold'}>me</a>.
           </p>
@@ -31,7 +31,7 @@ const About = () => {
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>
             Technologies I frequently use
           </h2>
-          <div className={'grid grid-cols-3 w-full mt-20 gap-6'}>
+          <div className={'grid grid-cols-3 w-full mt-20 gap-6 gap-y-12'}>
             <TechLink link={'https://reactjs.org/'} icon={<FaReact />} />
             <TechLink link={'https://firebase.google.com/'} icon={<SiFirebase />} />
             <TechLink link={'https://nextjs.org/'} icon={<SiNextdotjs />} />

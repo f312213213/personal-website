@@ -40,7 +40,7 @@ const Page = ({ children, ...customMeta }) => {
           )}
         </Head>
         <main className={'min-h-screen w-full relative flex justify-center text-center'}>
-          <div className={'w-2/5'}>
+          <div className={'sm:w-2/5 w-4/5'}>
             {children}
           </div>
         </main>

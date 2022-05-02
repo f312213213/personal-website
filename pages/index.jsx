@@ -14,8 +14,8 @@ const Home = () => {
         <div className={'w-40 h-40 rounded-full border-white border-2 overflow-hidden relative flex justify-center'}>
           <Image src={'/david.jpg'} layout={'fill'} objectFit={'contain'}/>
         </div>
-        <h1 className={'mt-8 text-6xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>David Chien</h1>
-        <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl'}>I build website.</p>
+        <h1 className={'mt-8 sm:text-6xl text-4xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>David Chien</h1>
+        <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>I build website.</p>
       </div>
       <div className={'mt-8 flex flex-col space-y-8 justify-center items-center'}>
         <p className={'text-black opacity-70 dark:text-gray-50'}>
