@@ -4,6 +4,7 @@ import { ContactDialogContext } from '@/context/useContactDialog'
 const Index = () => {
   const { show, toggleContactDialog } = React.useContext(ContactDialogContext)
   const [sending, setSending] = React.useState(false)
+  const [responseText, setResponseText] = React.useState('')
   const nameRef = React.useRef()
   const emailRef = React.useRef()
   const messageRef = React.useRef()
@@ -34,8 +35,11 @@ const Index = () => {
       nameRef.current.value = ''
       emailRef.current.value = ''
       messageRef.current.value = ''
+      setSending(false)
+      setResponseText('I will get back to you ASAP.')
     } catch (e) {
-
+      setSending(false)
+      setResponseText('Something goes wrong, please try later.')
     }
   }
 
@@ -108,6 +112,7 @@ const Index = () => {
                 : 'Send Message'
             }
           </button>
+          <p className={'text-center mt-4'}>{responseText}</p>
         </form>
       </div>
   )

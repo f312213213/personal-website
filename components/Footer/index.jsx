@@ -2,7 +2,10 @@ import React from 'react'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMail } from 'react-icons/ai'
 import Link from 'next/link'
 
+import { ContactDialogContext } from '@/context/useContactDialog'
+
 const Footer = () => {
+  const { toggleContactDialog } = React.useContext(ContactDialogContext)
   return (
       <footer className={' p-5 flex flex-col items-center justify-center w-full text-black dark:text-white opacity-70 text-lg'}>
         <div className={'flex flex-row text-3xl space-x-6 mb-4'}>
@@ -16,11 +19,9 @@ const Footer = () => {
               <AiFillLinkedin />
             </a>
           </Link>
-          <Link href={'mailto:david@chiendavid.com'}>
-            <a target={'_blank'}>
-              <AiFillMail />
-            </a>
-          </Link>
+          <button onClick={toggleContactDialog}>
+            <AiFillMail />
+          </button>
           <Link href={'https://instagram.com/yeeggg_'}>
             <a target={'_blank'}>
               <AiFillInstagram />
