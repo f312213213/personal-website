@@ -53,7 +53,7 @@ const Page = ({ children, ...customMeta }) => {
               <meta property="article:published_time" content={meta.date} />
           )}
         </Head>
-        <main className={'min-h-screen w-full relative flex justify-center text-center'}>
+        <main className={'min-h-screen w-full relative flex justify-center text-center dark:bg-[#121212]'}>
           <div className={'sm:w-2/5 w-4/5'}>
             {children}
           </div>

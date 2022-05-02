@@ -16,7 +16,7 @@ const Navbar = () => {
   }
   return (
       <>
-        <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex'}>
+        <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex dark:bg-[#121212]'}>
           <Link href={'/'}>
             <a>
               David
@@ -36,7 +36,7 @@ const Navbar = () => {
         <button className={'absolute p-6 text-2xl z-50 sm:hidden'} onClick={() => setShowNav(!showNav)}>
           <FaHamburger />
         </button>
-        <div className={`block md:hidden h-screen w-full dark:bg-black bg-white fixed transition z-20 ${showNav ? 'scale-100' : 'scale-0'}`}>
+        <div className={`block md:hidden h-screen w-full dark:bg-black bg-white fixed transition z-20 dark:bg-[#121212] ${showNav ? 'scale-100' : 'scale-0'}`}>
           <div className={'flex flex-col text-2xl justify-center items-center mt-4 h-full dark:text-gray-50 space-y-3'}>
               <Link href={'/'}>
                 <a onClick={() => setShowNav(false)}>
