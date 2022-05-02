@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Page from '@/components/Page'
 import Link from 'next/link'
-import {AiOutlineArrowDown} from 'react-icons/ai'
+import { AiOutlineArrowDown } from 'react-icons/ai'
 
-import { ContactDialogContext } from "@/context/useContactDialog";
+import { ContactDialogContext } from '@/context/useContactDialog'
 
 const Home = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
