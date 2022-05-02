@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 
 const Page = ({ children, ...customMeta }) => {
   const router = useRouter()
@@ -13,6 +14,19 @@ const Page = ({ children, ...customMeta }) => {
   }
   return (
       <>
+        <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-TP0XQPDH1G"
+            strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TP0XQPDH1G');
+        `}
+        </Script>
         <Head>
           <title>{meta.title}</title>
           <meta name="robots" content="follow, index" />
