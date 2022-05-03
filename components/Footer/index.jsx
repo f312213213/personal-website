@@ -31,7 +31,7 @@ const Footer = () => {
   return (
       <footer className={'p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
         <div className="flex items-center justify-center sm:flex-row mb-4 space-x-0 sm:space-x-4 w-full">
-          <div className={'flex items-center justify-center space-x-2'}>
+          <div className={'flex items-center justify-center max-w-full space-x-2'}>
             <a href={'https://www.spotify.com/tw/'} target={'_blank'} className={'text-2xl'} rel="noreferrer">
               <SiSpotify />
             </a>
