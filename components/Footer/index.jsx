@@ -36,7 +36,7 @@ const Footer = () => {
               <SiSpotify />
             </a>
             {
-              songData.is_playing
+              songData.is_playing && songData.currently_playing_type === 'track'
                 ? <NowPlaying songData={songData} />
                 : loading
                   ? <NowPlayingLoader />
