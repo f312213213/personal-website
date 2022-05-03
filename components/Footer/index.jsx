@@ -21,6 +21,7 @@ const Footer = () => {
       setLoading(false)
     } catch (e) {
       console.error(e)
+      setLoading(false)
     }
   }
 
