@@ -44,7 +44,7 @@ const Footer = () => {
                   ? <NowPlayingLoader />
                   : <NotPlaying />
             }
-            <button onClick={getNowPlaying} className={`text-2xl ${loading && 'spin'}`}>
+            <button onClick={getNowPlaying} className={`hidden sm:block text-2xl ${loading && 'spin'}`}>
               <MdAutorenew />
             </button>
           </div>
