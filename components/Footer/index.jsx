@@ -6,16 +6,19 @@ import Link from 'next/link'
 import { ContactDialogContext } from '@/context/useContactDialog'
 import NowPlaying from '@/components/NowPlaying'
 import NowPlayingLoader from '@/components/NowPlaying/NowPlayingLoader'
+import NotPlaying from '@/components/NowPlaying/NotPlaying'
 
 const Footer = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
   const [songData, setSongData] = React.useState({})
+  const [loading, setLoading] = React.useState(true)
 
   const getNowPlaying = async () => {
     try {
       const response = await fetch('https://asia-east1-get-current-spotify-song.cloudfunctions.net/now-playing')
       const song = await response.json()
       setSongData(song)
+      setLoading(false)
     } catch (e) {
       console.error(e)
     }
@@ -26,7 +29,7 @@ const Footer = () => {
   }, [])
   return (
       <footer className={'p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
-        <div className="flex items-center justify-center sm:flex-row mb-8 space-x-0 sm:space-x-4 w-full">
+        <div className="flex items-center justify-center sm:flex-row mb-4 space-x-0 sm:space-x-4 w-full">
           <div className={'flex items-center space-x-2'}>
             <a href={'https://www.spotify.com/tw/'} target={'_blank'} className={'text-2xl'} rel="noreferrer">
               <SiSpotify />
@@ -34,7 +37,9 @@ const Footer = () => {
             {
               songData.is_playing
                 ? <NowPlaying songData={songData} />
-                : <NowPlayingLoader />
+                : loading
+                  ? <NowPlayingLoader />
+                  : <NotPlaying />
             }
           </div>
         </div>
