@@ -7,7 +7,7 @@ const Projects = () => {
   const [repos, setRepos] = React.useState([])
   const getRepos = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/f312213213/repos?per_page=4&sort=pushed&page=1')
+      const response = await fetch('https://api.github.com/users/f312213213/repos?per_page=6&sort=pushed&page=1')
       const repoJson = await response.json()
       setRepos(repoJson)
     } catch (e) {
