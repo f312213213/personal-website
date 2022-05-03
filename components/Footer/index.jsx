@@ -13,7 +13,7 @@ const Footer = () => {
 
   const getNowPlaying = async () => {
     try {
-      const response = await fetch('https://asia-east1-mysqlonengine.cloudfunctions.net/now-playing')
+      const response = await fetch('https://asia-east1-get-current-spotify-song.cloudfunctions.net/now-playing')
       const song = await response.json()
       setSongData(song)
     } catch (e) {
