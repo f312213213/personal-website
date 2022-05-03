@@ -21,3 +21,7 @@ body {
 .top {
     @apply bottom-20
 }
+
+.spin {
+    @apply animate-spin
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMail } from 'react-icons/ai'
 import { SiSpotify } from 'react-icons/si'
+import { MdAutorenew } from 'react-icons/md'
 import Link from 'next/link'
 
 import { ContactDialogContext } from '@/context/useContactDialog'
@@ -14,6 +15,7 @@ const Footer = () => {
   const [loading, setLoading] = React.useState(true)
 
   const getNowPlaying = async () => {
+    setLoading(true)
     try {
       const response = await fetch('https://asia-east1-get-current-spotify-song.cloudfunctions.net/now-playing')
       const song = await response.json()
@@ -36,12 +38,15 @@ const Footer = () => {
               <SiSpotify />
             </a>
             {
-              songData.is_playing && songData.currently_playing_type === 'track'
+              !loading && songData.is_playing && songData.currently_playing_type === 'track'
                 ? <NowPlaying songData={songData} />
                 : loading
                   ? <NowPlayingLoader />
                   : <NotPlaying />
             }
+            <button onClick={getNowPlaying} className={`text-2xl ${loading && 'spin'}`}>
+              <MdAutorenew />
+            </button>
           </div>
         </div>
 
