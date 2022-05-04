@@ -5,6 +5,7 @@ import { FaHamburger } from 'react-icons/fa'
 import NavLink from './components/NavLink'
 import { ContactDialogContext } from '@/context/useContactDialog'
 import Footer from '@/components/Footer'
+import ContactMeButton from '@/components/Buttons/ContactMeButton'
 
 const Navbar = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
@@ -68,14 +69,9 @@ const Navbar = () => {
                 </a>
               </Link>
             <div className={'items-end'} onClick={() => setShowNav(false)}>
-              <Footer />
+              <Footer isNav />
             </div>
-            <button className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'} onClick={bigBtn}>
-              <span className={'animate-bounce mr-4'}>
-               👋
-              </span>
-              Contact me
-            </button>
+            <ContactMeButton onClick={bigBtn} />
           </div>
         </div>
       </>

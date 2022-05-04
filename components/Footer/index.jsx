@@ -8,8 +8,9 @@ import { ContactDialogContext } from '@/context/useContactDialog'
 import NowPlaying from '@/components/NowPlaying'
 import NowPlayingLoader from '@/components/NowPlaying/NowPlayingLoader'
 import NotPlaying from '@/components/NowPlaying/NotPlaying'
+import Spotify from '@/components/Spotify'
 
-const Footer = () => {
+const Footer = ({ isNav }) => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
   const [songData, setSongData] = React.useState({})
   const [loading, setLoading] = React.useState(true)
@@ -32,23 +33,10 @@ const Footer = () => {
   }, [])
   return (
       <footer className={'p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
-        <div className="flex items-center justify-center sm:flex-row mb-4 space-x-0 sm:space-x-4 w-full">
-          <div className={'flex items-center justify-center max-w-full space-x-2'}>
-            <a href={'https://www.spotify.com/tw/'} target={'_blank'} className={'text-2xl'} rel="noreferrer">
-              <SiSpotify />
-            </a>
-            {
-              !loading && songData.is_playing && songData.currently_playing_type === 'track'
-                ? <NowPlaying songData={songData} />
-                : loading
-                  ? <NowPlayingLoader />
-                  : <NotPlaying />
-            }
-            <button disabled={loading} onClick={getNowPlaying} className={`hidden sm:block text-2xl ${loading && 'spin'}`}>
-              <MdAutorenew />
-            </button>
-          </div>
-        </div>
+
+        {
+          !isNav && <Spotify getNowPlaying={getNowPlaying} loading={loading} songData={songData} />
+        }
 
         <div className={'flex flex-row text-3xl space-x-6 mb-4'}>
           <Link href={'https://github.com/f312213213'}>

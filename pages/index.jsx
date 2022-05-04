@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 
 import { ContactDialogContext } from '@/context/useContactDialog'
+import ContactMeButton from '@/components/Buttons/ContactMeButton'
 
 const Home = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
@@ -39,12 +40,7 @@ const Home = () => {
         <p className={'text-black opacity-70 dark:text-gray-50'}>
           My inbox is always open for you. Feel free to ask me anything!
         </p>
-        <button className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'} onClick={toggleContactDialog}>
-          <span className={'animate-bounce mr-4'}>
-           👋
-          </span>
-          Contact me
-        </button>
+        <ContactMeButton onClick={toggleContactDialog} />
       </div>
     </Page>
   )
