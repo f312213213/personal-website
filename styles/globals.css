@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .activeLink {
-    @apply bg-white rounded-2xl dark:text-black
+    @apply bg-white dark:text-black
 }
 
 .footerContent {

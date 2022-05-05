@@ -7,7 +7,7 @@ const NavLink = ({ path, text, newTab }) => {
 
   return (
       <Link href={path}>
-        <a className={`text-center px-2 w-full ${router.asPath.includes(path) && 'activeLink'}`} target={newTab ? '_blank' : undefined}>
+        <a className={`text-center transition dark:hover:bg-gray-400 hover:bg-gray-300 rounded-2xl px-2 w-full ${router.asPath.includes(path) && 'activeLink'}`} target={newTab ? '_blank' : undefined}>
           {text}
         </a>
       </Link>
