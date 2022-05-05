@@ -12,7 +12,7 @@ const About = () => {
       <Page title={'About - David'} description={'I\'m a student and frontend developer living in Taipei.'}>
         <div className={'mt-20 flex flex-col space-y-8 justify-center mb-16'}>
           <h1 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
-            Student and passionate
+            Student with Passionate
           </h1>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             I&apos;m a student and frontend developer living in Taipei.

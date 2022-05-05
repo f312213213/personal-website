@@ -2,6 +2,7 @@ import React from 'react'
 import Page from '@/components/Page'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import Link from 'next/link'
+import BigLinkButton from '@/components/Buttons/BigLinkButton'
 
 const Projects = () => {
   const [repos, setRepos] = React.useState([])
@@ -26,16 +27,7 @@ const Projects = () => {
           <p className={'text-black opacity-70 dark:text-gray-50'}>
             I&apos;m always working on new projects.
           </p>
-          <Link href={'https://github.com/f312213213'}>
-            <a target={'_blank'} className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
-              View my Github
-              <div className={'-rotate-90'}>
-                <div className={'animate-bounce mt-2'}>
-                  <AiOutlineArrowDown />
-                </div>
-              </div>
-            </a>
-          </Link>
+          <BigLinkButton text={'View My Github'} path={'https://github.com/f312213213'} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10 sm:gap-y-20">

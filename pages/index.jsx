@@ -1,11 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Page from '@/components/Page'
-import Link from 'next/link'
-import { AiOutlineArrowDown } from 'react-icons/ai'
 
 import { ContactDialogContext } from '@/context/useContactDialog'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
+import BigLinkButton from '@/components/Buttons/BigLinkButton'
 
 const Home = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
@@ -22,16 +21,7 @@ const Home = () => {
         <p className={'text-black opacity-70 dark:text-gray-50'}>
           I am a self-motivated student in CS area, seeking for an intern position, hoping to learn more about web or software development in real business production
         </p>
-        <Link href={'/about'}>
-          <a className={'bg-black dark:bg-gray-50 dark:text-black text-gray-50 mt-8 text-xl md:text-2xl p-4 rounded-xl flex items-center transform hover:scale-110 transition'}>
-            More About Me
-            <div className={'-rotate-90'}>
-              <div className={'animate-bounce mt-2'}>
-                <AiOutlineArrowDown />
-              </div>
-            </div>
-          </a>
-        </Link>
+        <BigLinkButton path={'/about'} text={'More About Me'} />
       </div>
       <div className={'mt-36 sm:mt-44 flex flex-col space-y-8 justify-center items-center mb-16'}>
         <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
