@@ -5,6 +5,7 @@ import Page from '@/components/Page'
 import { ContactDialogContext } from '@/context/useContactDialog'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
 import BigLinkButton from '@/components/Buttons/BigLinkButton'
+import userData from '@/constant/userData'
 
 const Home = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
@@ -12,14 +13,14 @@ const Home = () => {
     <Page>
       <div className={'flex flex-col items-center p-14 mt-8 pb-8'}>
         <div className={'w-40 h-40 rounded-full border-white border-2 overflow-hidden relative flex justify-center'}>
-          <Image src={'/david.jpg'} layout={'fill'} objectFit={'contain'}/>
+          <Image src={userData.general.avatar} layout={'fill'} objectFit={'contain'}/>
         </div>
-        <h1 className={'mt-8 sm:text-6xl text-4xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>David Chien</h1>
-        <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>I build website.</p>
+        <h1 className={'mt-8 sm:text-6xl text-4xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>{userData.general.firstName} {userData.general.lastName}</h1>
+        <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>{userData.homePage.slogan}</p>
       </div>
       <div className={'mt-8 flex flex-col space-y-8 justify-center items-center'}>
         <p className={'text-black opacity-70 dark:text-gray-50'}>
-          I am a self-motivated student in CS area, seeking for an intern position, hoping to learn more about web or software development in real business production
+          {userData.homePage.introduction}
         </p>
         <BigLinkButton path={'/about'} text={'More About Me'} />
       </div>

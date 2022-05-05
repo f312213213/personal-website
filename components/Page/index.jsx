@@ -3,12 +3,14 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 
+import userData from '@/constant/userData'
+
 const Page = ({ children, ...customMeta }) => {
   const router = useRouter()
   const meta = {
     title: 'David - Learning, Developing and Writing',
     description: 'I am a student passionate about web development. Get in touch with me to know more.',
-    image: '/david.jpg',
+    image: userData.general.avatar,
     type: 'website',
     ...customMeta
   }
@@ -40,7 +42,7 @@ const Page = ({ children, ...customMeta }) => {
               href={`https://chiendavid.com${router.asPath}`}
           />
           <meta property="og:type" content={meta.type} />
-          <meta property="og:site_name" content="David" />
+          <meta property="og:site_name" content={userData.general.firstName} />
           <meta property="og:description" content={meta.description} />
           <meta property="og:title" content={meta.title} />
           <meta property="og:image" content={meta.image} />
@@ -49,12 +51,9 @@ const Page = ({ children, ...customMeta }) => {
           <meta name="twitter:title" content={meta.title} />
           <meta name="twitter:description" content={meta.description} />
           <meta name="twitter:image" content={meta.image} />
-          {meta.date && (
-              <meta property="article:published_time" content={meta.date} />
-          )}
         </Head>
         <main className={'min-h-screen w-full relative flex justify-center text-center dark:bg-[#121212]'}>
-          <div className={'sm:w-2/5 w-4/5'}>
+          <div className={'sm:w-3/5 lg:w-2/5 w-4/5'}>
             {children}
           </div>
         </main>

@@ -1,14 +1,14 @@
 import React from 'react'
 import Page from '@/components/Page'
-import { AiOutlineArrowDown } from 'react-icons/ai'
-import Link from 'next/link'
+
+import userData from '@/constant/userData'
 import BigLinkButton from '@/components/Buttons/BigLinkButton'
 
 const Projects = () => {
   const [repos, setRepos] = React.useState([])
   const getRepos = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/f312213213/repos?per_page=6&sort=pushed&page=1')
+      const response = await fetch(`https://api.github.com/users/${userData.general.socialID.github}/repos?per_page=6&sort=pushed&page=1`)
       const repoJson = await response.json()
       setRepos(repoJson)
     } catch (e) {
@@ -27,7 +27,7 @@ const Projects = () => {
           <p className={'text-black opacity-70 dark:text-gray-50'}>
             I&apos;m always working on new projects.
           </p>
-          <BigLinkButton text={'View My Github'} path={'https://github.com/f312213213'} />
+          <BigLinkButton text={'View My Github'} path={`https://github.com/${userData.general.socialID.github}`} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10 sm:gap-y-20">

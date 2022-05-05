@@ -6,6 +6,7 @@ import NavLink from './components/NavLink'
 import { ContactDialogContext } from '@/context/useContactDialog'
 import Footer from '@/components/Footer'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
+import userData from '@/constant/userData'
 
 const Navbar = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
@@ -29,7 +30,7 @@ const Navbar = () => {
         <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex dark:bg-[#121212]'}>
           <Link href={'/'}>
             <a>
-              David
+              {userData.general.firstName}
             </a>
           </Link>
           <div className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
@@ -50,7 +51,7 @@ const Navbar = () => {
           <div className={'flex flex-col text-2xl justify-center items-center mt-4 h-full dark:text-gray-50 space-y-3'}>
               <Link href={'/'}>
                 <a onClick={() => setShowNav(false)}>
-                  David
+                  {userData.general.firstName}
                 </a>
               </Link>
               <Link href={'/about'}>

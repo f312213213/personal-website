@@ -5,46 +5,26 @@ import { MdAutorenew } from 'react-icons/md'
 import Link from 'next/link'
 
 import { ContactDialogContext } from '@/context/useContactDialog'
-import NowPlaying from '@/components/NowPlaying'
-import NowPlayingLoader from '@/components/NowPlaying/NowPlayingLoader'
-import NotPlaying from '@/components/NowPlaying/NotPlaying'
 import Spotify from '@/components/Spotify'
+import userData from '@/constant/userData'
 
 const Footer = ({ isNav }) => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
-  const [songData, setSongData] = React.useState({})
-  const [loading, setLoading] = React.useState(true)
 
-  const getNowPlaying = async () => {
-    setLoading(true)
-    try {
-      const response = await fetch('https://asia-east1-get-current-spotify-song.cloudfunctions.net/now-playing')
-      const song = await response.json()
-      setSongData(song)
-      setLoading(false)
-    } catch (e) {
-      console.error(e)
-      setLoading(false)
-    }
-  }
-
-  React.useEffect(() => {
-    getNowPlaying()
-  }, [])
   return (
       <footer className={'p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
 
         {
-          !isNav && <Spotify getNowPlaying={getNowPlaying} loading={loading} songData={songData} />
+          !isNav && <Spotify />
         }
 
         <div className={'flex flex-row text-3xl space-x-6 mb-4'}>
-          <Link href={'https://github.com/f312213213'}>
+          <Link href={`https://github.com/${userData.general.socialID.github}`}>
             <a target={'_blank'}>
               <AiFillGithub />
             </a>
           </Link>
-          <Link href={'https://www.linkedin.com/in/davidchien419/'}>
+          <Link href={`https://www.linkedin.com/in/${userData.general.socialID.linkedin}`}>
             <a target={'_blank'}>
               <AiFillLinkedin />
             </a>
@@ -52,13 +32,13 @@ const Footer = ({ isNav }) => {
           <button onClick={toggleContactDialog} className={'shadow-none'}>
             <AiFillMail />
           </button>
-          <Link href={'https://instagram.com/yeeggg_'}>
+          <Link href={`https://instagram.com/${userData.general.socialID.instagram}`}>
             <a target={'_blank'}>
               <AiFillInstagram />
             </a>
           </Link>
         </div>
-        © 2022 David Chien
+        © 2022 {userData.general.firstName} {userData.general.lastName}
       </footer>
   )
 }
