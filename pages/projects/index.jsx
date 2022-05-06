@@ -19,7 +19,7 @@ const Projects = () => {
     getRepos()
   }, [])
   return (
-      <Page title={'Projects - David'} description={'Here are my recent works.'}>
+      <Page title={'Projects - David'} description={'Here are my recent works. Or you can find my github link inside!'}>
         <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
           <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Latest Code

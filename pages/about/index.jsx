@@ -7,7 +7,7 @@ import userData from '@/constant/userData'
 
 const About = () => {
   return (
-      <Page title={'About - David'} description={'I\'m a student and frontend developer living in Taipei.'}>
+      <Page title={'About - David'} description={'I\'m a student and frontend developer living in Taipei. You can find more information on this page.'}>
         <div className={'mt-20 flex flex-col space-y-8 justify-center mb-16'}>
           <h1 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Student with Passionate
