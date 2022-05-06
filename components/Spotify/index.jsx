@@ -43,7 +43,7 @@ const Spotify = () => {
             <MdAutorenew />
           </button>
           <div className={'absolute -top-10 transform transition scale-0 group-hover:scale-100 bg-[#121212] dark:bg-gray-50 dark:text-[#121212]  text-gray-50 rounded text-sm p-2'}>
-            Current Playing!
+            Currently {!songData.is_playing && 'not'} Playing!
           </div>
         </div>
       </div>

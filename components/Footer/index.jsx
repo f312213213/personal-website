@@ -1,7 +1,5 @@
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiFillMail } from 'react-icons/ai'
-import { SiSpotify } from 'react-icons/si'
-import { MdAutorenew } from 'react-icons/md'
 import Link from 'next/link'
 
 import { ContactDialogContext } from '@/context/useContactDialog'
