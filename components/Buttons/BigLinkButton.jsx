@@ -17,4 +17,4 @@ const BigLinkButton = ({ path, text }) => {
   )
 }
 
-export default BigLinkButton
+export default React.memo(BigLinkButton)

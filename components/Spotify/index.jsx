@@ -50,4 +50,4 @@ const Spotify = () => {
   )
 }
 
-export default Spotify
+export default React.memo(Spotify)

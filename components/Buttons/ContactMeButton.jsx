@@ -11,4 +11,4 @@ const ContactMeButton = ({ onClick }) => {
   )
 }
 
-export default ContactMeButton
+export default React.memo(ContactMeButton)

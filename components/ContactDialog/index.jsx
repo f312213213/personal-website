@@ -2,7 +2,7 @@ import React from 'react'
 import { ContactDialogContext } from '@/context/useContactDialog'
 
 const ContactDialog = () => {
-  const { show, toggleContactDialog } = React.useContext(ContactDialogContext)
+  const { show, closeContactDialog } = React.useContext(ContactDialogContext)
   const [sending, setSending] = React.useState(false)
   const [responseText, setResponseText] = React.useState('')
   const nameRef = React.useRef()
@@ -54,7 +54,7 @@ const ContactDialog = () => {
 
   const handleClose = (e) => {
     if (e.target === wrapperRef.current || e.key === 'Escape') {
-      toggleContactDialog()
+      closeContactDialog()
     }
   }
 

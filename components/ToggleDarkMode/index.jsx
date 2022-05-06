@@ -29,4 +29,4 @@ const ToggleDarkMode = () => {
   )
 }
 
-export default ToggleDarkMode
+export default React.memo(ToggleDarkMode)

@@ -7,15 +7,16 @@ import { ContactDialogContext } from '@/context/useContactDialog'
 import Footer from '@/components/Footer'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
 import userData from '@/constant/userData'
+import Home from '@/components/Navbar/components/Home'
 
 const Navbar = () => {
-  const { toggleContactDialog } = React.useContext(ContactDialogContext)
+  const { openContactDialog } = React.useContext(ContactDialogContext)
   const [showNav, setShowNav] = React.useState(false)
 
-  const bigBtn = () => {
+  const bigBtn = React.useCallback(() => {
     setShowNav(false)
-    toggleContactDialog()
-  }
+    openContactDialog()
+  }, [])
 
   React.useEffect(() => {
     if (showNav) {
@@ -28,19 +29,15 @@ const Navbar = () => {
   return (
       <>
         <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex dark:bg-[#121212]'}>
-          <Link href={'/'}>
-            <a>
-              {userData.general.firstName}
-            </a>
-          </Link>
-          <div className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
+          <Home />
+          <ul className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
             <div className={'w-full grid grid-cols-3 gap-6'}>
               <NavLink text={'About'} path={'/about'} />
               <NavLink text={'Blog'} path={'https://blog.chiendavid.com/'} newTab />
               <NavLink text={'Projects'} path={'/projects'} />
             </div>
-          </div>
-          <button onClick={toggleContactDialog} className={'shadow-none'}>
+          </ul>
+          <button onClick={openContactDialog} className={'shadow-none'}>
             Contact
           </button>
         </nav>

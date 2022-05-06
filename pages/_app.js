@@ -16,8 +16,8 @@ function App ({ Component, pageProps }) {
           <Navbar />
           <Component {...pageProps} />
           <Footer />
-          <ToggleDarkMode />
         </ContactDialogProvider>
+        <ToggleDarkMode />
       </ThemeProvider>
   )
 }

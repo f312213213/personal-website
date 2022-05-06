@@ -6,15 +6,14 @@ import { ContactDialogContext } from '@/context/useContactDialog'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
 import BigLinkButton from '@/components/Buttons/BigLinkButton'
 import userData from '@/constant/userData'
+import Avatar from '@/components/Avatar'
 
 const Home = () => {
-  const { toggleContactDialog } = React.useContext(ContactDialogContext)
+  const { openContactDialog } = React.useContext(ContactDialogContext)
   return (
     <Page>
       <div className={'flex flex-col items-center p-14 pb-8'}>
-        <div className={'w-40 h-40 rounded-full border-white border-2 overflow-hidden relative flex justify-center'}>
-          <Image src={userData.general.avatar} layout={'fill'} objectFit={'contain'}/>
-        </div>
+        <Avatar />
         <h1 className={'mt-8 sm:text-6xl text-4xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>{userData.general.firstName} {userData.general.lastName}</h1>
         <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>{userData.homePage.slogan}</p>
       </div>
@@ -31,7 +30,7 @@ const Home = () => {
         <p className={'text-black opacity-70 dark:text-gray-50'}>
           My inbox is always open for you. Feel free to ask me anything!
         </p>
-        <ContactMeButton onClick={toggleContactDialog} />
+        <ContactMeButton onClick={openContactDialog} />
       </div>
     </Page>
   )
