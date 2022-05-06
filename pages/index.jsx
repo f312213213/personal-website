@@ -11,7 +11,7 @@ const Home = () => {
   const { toggleContactDialog } = React.useContext(ContactDialogContext)
   return (
     <Page>
-      <div className={'flex flex-col items-center p-14 mt-8 pb-8'}>
+      <div className={'flex flex-col items-center p-14 pb-8'}>
         <div className={'w-40 h-40 rounded-full border-white border-2 overflow-hidden relative flex justify-center'}>
           <Image src={userData.general.avatar} layout={'fill'} objectFit={'contain'}/>
         </div>
