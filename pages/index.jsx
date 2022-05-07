@@ -1,15 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
 import Page from '@/components/Page'
 
-import { ContactDialogContext } from '@/context/useContactDialog'
 import ContactMeButton from '@/components/Buttons/ContactMeButton'
 import BigLinkButton from '@/components/Buttons/BigLinkButton'
 import userData from '@/constant/userData'
 import Avatar from '@/components/Avatar'
 
 const Home = () => {
-  const { openContactDialog } = React.useContext(ContactDialogContext)
   return (
     <Page>
       <div className={'flex flex-col items-center p-14 pb-8'}>
@@ -30,7 +27,7 @@ const Home = () => {
         <p className={'text-black opacity-70 dark:text-gray-50'}>
           My inbox is always open for you. Feel free to ask me anything!
         </p>
-        <ContactMeButton onClick={openContactDialog} />
+        <ContactMeButton />
       </div>
     </Page>
   )
