@@ -27,16 +27,16 @@ const Navbar = () => {
   }, [showNav])
 
   return (
-      <>
+      <header>
         <nav className={'justify-around items-center p-4 px-8 w-full text-lg pt-8 dark:opacity-70 hidden sm:flex dark:bg-[#121212]'}>
           <Home />
-          <ul className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
-            <div className={'w-full grid grid-cols-3 gap-6'}>
+          <div className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700'}>
+            <ul className={'w-full grid grid-cols-3 gap-6'}>
               <NavLink text={'About'} path={'/about'} />
               <NavLink text={'Blog'} path={'https://blog.chiendavid.com/'} newTab />
               <NavLink text={'Projects'} path={'/projects'} />
-            </div>
-          </ul>
+            </ul>
+          </div>
           <button onClick={openContactDialog} className={'shadow-none'}>
             Contact
           </button>
@@ -72,7 +72,7 @@ const Navbar = () => {
             <ContactMeButton onClick={bigBtn} />
           </div>
         </div>
-      </>
+      </header>
   )
 }
 

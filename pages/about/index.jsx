@@ -40,11 +40,11 @@ const About = () => {
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>
             Experiences
           </h2>
-          <div className={'flex flex-col w-full divide-y'}>
+          <ul className={'flex flex-col w-full divide-y'}>
             {
               userData.aboutPage.experience.map(e => <ExperienceRow key={e.companyName} companyName={e.companyName} timeLine={e.timeLine} description={e.description} />)
             }
-          </div>
+          </ul>
         </div>
       </Page>
   )

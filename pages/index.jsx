@@ -12,7 +12,7 @@ const Home = () => {
       <div className={'flex flex-col items-center p-14 pb-8'}>
         <Avatar />
         <h1 className={'mt-8 sm:text-6xl text-4xl dark:text-gray-50 font-extrabold whitespace-nowrap'}>{userData.general.firstName} {userData.general.lastName}</h1>
-        <p className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>{userData.homePage.slogan}</p>
+        <h3 className={'mt-4 text-black dark:text-gray-50 opacity-70 text-2xl whitespace-nowrap'}>{userData.homePage.slogan}</h3>
       </div>
       <div className={'mt-8 flex flex-col space-y-8 justify-center items-center'}>
         <p className={'text-black opacity-70 dark:text-gray-50'}>

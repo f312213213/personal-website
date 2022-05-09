@@ -5,7 +5,7 @@ import userData from '@/constant/userData'
 import BigLinkButton from '@/components/Buttons/BigLinkButton'
 
 const Projects = () => {
-  const [repos, setRepos] = React.useState([])
+  const [repos, setRepos] = React.useState(null)
   const getRepos = async () => {
     try {
       const response = await fetch(`https://api.github.com/users/${userData.general.socialID.github}/repos?per_page=6&sort=pushed&page=1`)
@@ -32,7 +32,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10 sm:gap-y-20">
           {
-            repos[0]
+            repos
               ? repos.map((latestRepo) => (
                   <GithubRepoCard latestRepo={latestRepo} key={latestRepo.id} />
               ))
