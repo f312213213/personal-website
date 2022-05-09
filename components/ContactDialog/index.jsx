@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
 import { ContactDialogContext } from '@/context/useContactDialog'
 
 const ContactDialog = () => {

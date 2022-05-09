@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
+import { motion } from 'framer-motion'
 
 import userData from '@/constant/userData'
 
@@ -52,11 +53,11 @@ const Page = ({ children, ...customMeta }) => {
           <meta name="twitter:description" content={meta.description} />
           <meta name="twitter:image" content={meta.image} />
         </Head>
-        <main className={'min-h-screen w-full relative flex justify-center text-center dark:bg-[#121212]'}>
+        <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'min-h-screen w-full relative flex justify-center text-center dark:bg-[#121212] transition duration-200'}>
           <div className={'sm:w-3/5 lg:w-2/5 w-4/5'}>
             {children}
           </div>
-        </main>
+        </motion.main>
       </>
   )
 }

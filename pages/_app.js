@@ -1,5 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'next-themes'
+import { AnimatePresence } from 'framer-motion'
 
 import '../styles/globals.css'
 import Navbar from '@/components/Navbar'
@@ -14,7 +15,9 @@ function App ({ Component, pageProps }) {
         <ContactDialogProvider>
           <ContactDialog />
           <Navbar />
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} />
+          </AnimatePresence>
           <Footer />
         </ContactDialogProvider>
         <ToggleDarkMode />

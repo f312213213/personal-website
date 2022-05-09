@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "framer-motion": "^6.3.3",
     "next": "12.1.5",
     "next-sitemap": "^2.5.20",
     "next-themes": "^0.1.1",

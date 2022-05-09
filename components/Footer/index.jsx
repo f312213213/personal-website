@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 import Spotify from '@/components/Spotify'
 import userData from '@/constant/userData'
@@ -8,7 +9,7 @@ import FooterContact from '@/components/Footer/components/FooterContact'
 
 const Footer = ({ isNav }) => {
   return (
-      <footer className={'p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
+      <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'transition duration-200 p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
 
         {
           !isNav && <Spotify />
@@ -21,7 +22,7 @@ const Footer = ({ isNav }) => {
           <FooterLink link={`https://instagram.com/${userData.general.socialID.instagram}`} icon={<AiFillInstagram />} />
         </div>
         © 2022 {userData.general.firstName} {userData.general.lastName}
-      </footer>
+      </motion.footer>
   )
 }
 
