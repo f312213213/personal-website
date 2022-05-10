@@ -28,7 +28,7 @@ const Spotify = () => {
   }, [])
   return (
       <div className="flex items-center justify-center sm:flex-row mb-4 space-x-0 sm:space-x-4 w-full">
-        <div className={'relative flex items-center justify-center w-9/12 sm:w-6/12 space-x-2 group'}>
+        <div className={'relative flex items-center justify-center w-9/12 sm:max-w-fit space-x-2 group'}>
           <a href={'https://www.spotify.com/tw/'} target={'_blank'} className={'text-2xl'} rel="noreferrer">
             <SiSpotify />
           </a>
