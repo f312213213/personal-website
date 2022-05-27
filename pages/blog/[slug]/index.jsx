@@ -1,22 +1,14 @@
 import React from 'react'
 import { gql, GraphQLClient } from 'graphql-request'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
+import he from 'he'
+
 import Page from '@/components/Page'
+
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
 )
-
-const QUERY_POST = gql`
-  {
-    posts(where: {slug: "a-new-blog"}) {
-      title
-      id
-      slug
-      content{
-        html
-      }
-    }
-  }
-`
 
 const QUERY_POSTS = gql`
   {
@@ -26,18 +18,34 @@ const QUERY_POSTS = gql`
   }
 `
 
-const Post = ({ posts }) => {
+const Post = ({ post, content }) => {
   return (
-      <Page title={`${posts[0].title} - David`} description={posts[0].title}>
-        <div dangerouslySetInnerHTML={{ __html: posts[0].content.html }} />
+      <Page title={`${post.title} - David`} description={post.title}>
+        <div className="prose prose-lg dark:prose-invert max-w-none mt-4" dangerouslySetInnerHTML={{ __html: content }} />
       </Page>
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ params }) => {
+  const QUERY_POST = gql`
+  {
+    posts(where: {slug: "${params.slug}"}) {
+      title
+      id
+      slug
+      content{
+        html
+        markdown
+      }
+    }
+  }
+`
   const { posts } = await graphCms.request(QUERY_POST)
   return {
-    props: { posts }
+    props: {
+      post: posts[0],
+      content: posts[0].content.html
+    }
   }
 }
 
