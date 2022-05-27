@@ -21,7 +21,7 @@ const QUERY_POSTS = gql`
 const Post = ({ post, source }) => {
   return (
       <Page title={`${post.title} - David`} description={post.title} image={post.coverPhoto?.url ?? undefined} date={post.datePost}>
-        <div className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4">
+        <div className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4 text-left">
           <MDXRemote {...source} components={{ img: PostBlurImage }} />
         </div>
       </Page>
