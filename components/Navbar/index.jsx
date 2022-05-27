@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className={'px-4 py-2 rounded-3xl bg-gray-200 dark:bg-gray-700 transition duration-75'}>
             <ul className={'w-full grid grid-cols-3 gap-6'}>
               <NavLink text={'About'} path={'/about'} />
-              <NavLink text={'Blog'} path={'https://blog.chiendavid.com/'} newTab />
+              <NavLink text={'Blog'} path={'/blog'} />
               <NavLink text={'Projects'} path={'/projects'} />
             </ul>
           </div>
@@ -57,8 +57,8 @@ const Navbar = () => {
                 About
               </a>
             </Link>
-            <Link href={'https://blog.chiendavid.com/'}>
-              <a target={'_blank'} onClick={() => setShowNav(false)}>
+            <Link href={'/blog'}>
+              <a onClick={() => setShowNav(false)}>
                 Blog
               </a>
             </Link>
