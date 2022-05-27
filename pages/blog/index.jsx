@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 
 import Page from '@/components/Page'
+import BigLinkButton from '@/components/Buttons/BigLinkButton'
+import userData from '@/constant/userData'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
@@ -23,7 +25,7 @@ const BLog = () => {
   const [posts, setPosts] = React.useState(null)
   const getSomePost = async () => {
     const { posts } = await graphCms.request(QUERY)
-    setPosts(posts)
+    setPosts(posts.reverse())
   }
   React.useEffect(() => {
     getSomePost()
@@ -31,6 +33,11 @@ const BLog = () => {
 
   return (
       <Page title={'My Blog - David'} description={'You can find some posts by me on this page.'}>
+        <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
+          <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
+            My Blog
+          </h2>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10 sm:gap-y-20">
           {
             posts

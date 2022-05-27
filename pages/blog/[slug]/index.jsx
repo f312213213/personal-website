@@ -21,7 +21,7 @@ const QUERY_POSTS = gql`
 const Post = ({ post, content }) => {
   return (
       <Page title={`${post.title} - David`} description={post.title}>
-        <div className="prose prose-lg dark:prose-invert max-w-none mt-4" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4" dangerouslySetInnerHTML={{ __html: content }} />
       </Page>
   )
 }
