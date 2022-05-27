@@ -46,12 +46,14 @@ const Page = ({ children, ...customMeta }) => {
           <meta property="og:site_name" content={userData.general.firstName} />
           <meta property="og:description" content={meta.description} />
           <meta property="og:title" content={meta.title} />
-          <meta property="og:image" content={meta.image} />
+          <meta property="og:image" content={meta.image ?? userData.general.avatar} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@f312212213" />
+          <meta name="twitter:site" content="@yeeggg__" />
           <meta name="twitter:title" content={meta.title} />
           <meta name="twitter:description" content={meta.description} />
-          <meta name="twitter:image" content={meta.image} />
+          <meta name="twitter:image" content={meta.image ?? userData.general.avatar} />
+          <meta property="article:published_time" content={meta.date} />
+
         </Head>
         <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'min-h-screen w-full relative flex justify-center text-center dark:bg-[#121212] transition duration-200'}>
           <div className={'sm:w-3/5 lg:w-2/5 w-4/5'}>

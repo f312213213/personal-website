@@ -2,9 +2,9 @@ import React from 'react'
 import { gql, GraphQLClient } from 'graphql-request'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import he from 'he'
 
 import Page from '@/components/Page'
+import PostBlurImage from '@/components/PostBlurImage'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
@@ -18,10 +18,12 @@ const QUERY_POSTS = gql`
   }
 `
 
-const Post = ({ post, content }) => {
+const Post = ({ post, source }) => {
   return (
-      <Page title={`${post.title} - David`} description={post.title}>
-        <div className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4" dangerouslySetInnerHTML={{ __html: content }} />
+      <Page title={`${post.title} - David`} description={post.title} image={post.coverPhoto.url} date={post.datePost}>
+        <div className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4">
+          <MDXRemote {...source} components={{ img: PostBlurImage }} />
+        </div>
       </Page>
   )
 }
@@ -31,8 +33,11 @@ export const getStaticProps = async ({ params }) => {
   {
     posts(where: {slug: "${params.slug}"}) {
       title
-      id
+      datePost
       slug
+      coverPhoto{
+        url
+      }
       content{
         html
         markdown
@@ -44,7 +49,7 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       post: posts[0],
-      content: posts[0].content.html
+      source: await serialize(posts[0].content.markdown)
     }
   }
 }

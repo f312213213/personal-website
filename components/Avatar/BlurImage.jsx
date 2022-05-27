@@ -1,9 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import userData from '@/constant/userData'
-
-const BlurImage = () => {
+const BlurImage = ({ src, alt }) => {
   const [isLoading, setLoading] = React.useState(true)
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ')
@@ -18,8 +16,8 @@ const BlurImage = () => {
           )}
           layout={'fill'}
           objectFit={'contain'}
-          src={userData.general.avatar}
-          alt={userData.homePage.slogan}
+          src={src}
+          alt={alt}
           onLoadingComplete={() => { setLoading(false) }}
       />
   )
