@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.activeLink {
+    @apply border-gray-400
+}
+
+.footerContent {
+    @apply text-black opacity-70
+}
+
+body {
+    @apply font-mono
+}
+
+.hide {
+    @apply hidden transition
+}
+
+.top {
+    @apply bottom-20
+}
+
+.spin {
+    @apply animate-spin
+}
