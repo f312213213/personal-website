@@ -15,7 +15,7 @@ function App ({ Component, pageProps }) {
         <ContactDialogProvider>
           <ContactDialog />
           <Navbar />
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
             <Component {...pageProps} />
           </AnimatePresence>
           <Footer />

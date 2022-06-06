@@ -34,7 +34,8 @@ const Post = ({ post, content }) => {
           <RichText
               content={content}
               renderers={{
-                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} />
+                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} />,
+                a: ({ children, href }) => <a href={href} target={'_blank'} rel="noreferrer">{children}</a>
               }}
           />
         </article>
@@ -58,7 +59,6 @@ export const getStaticProps = async ({ params }) => {
       }
       content{
         raw
-        markdown
       }
       author {
         username
