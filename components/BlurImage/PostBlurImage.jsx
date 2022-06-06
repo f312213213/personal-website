@@ -15,7 +15,6 @@ const PostBlurImage = (props) => {
               : 'scale-100 blur-0 grayscale-0'
           )}
           objectFit={'cover'}
-          priority={props.priority}
           {...props}
           onLoadingComplete={() => { setLoading(false) }}
       />

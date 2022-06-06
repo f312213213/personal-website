@@ -32,13 +32,12 @@ const Post = ({ post, content, anchor }) => {
             </p>
           </section>
           <ToC anchor={anchor} />
-          <hr/>
           <ShareLinks title={post.title} />
           <PostBlurImage src={post.coverPhoto.url} alt={post.title} height={post.coverPhoto.height} width={post.coverPhoto.width} priority={true} />
           <RichText
               content={content}
               renderers={{
-                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} />,
+                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} priority={false} />,
                 a: ({ children, href }) => <a href={href} target={'_blank'} rel="noreferrer">{children}</a>,
                 h2: ({ children }) => <H2>{children}</H2>
               }}
