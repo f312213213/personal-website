@@ -7,6 +7,7 @@ const AuthorBlurImage = ({ src }) => {
       <div className={'w-8 aspect-square rounded-full overflow-hidden relative flex justify-center'}>
         <AvatarBlurImage
             src={src}
+            priority={true}
         />
       </div>
   )
