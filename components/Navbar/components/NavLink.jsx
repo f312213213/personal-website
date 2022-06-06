@@ -6,11 +6,13 @@ const NavLink = ({ path, text }) => {
   const router = useRouter()
 
   return (
-    <Link href={path}>
-      <a className={`transition text-sm border-b border-transparent hover:border-gray-400${router.asPath.includes(path) ? ' activeLink' : ''}`}>
-        {text}
-      </a>
-    </Link>
+      <li>
+        <Link href={path}>
+          <a className={`transition text-sm border-b border-transparent hover:border-gray-400${router.asPath.includes(path) ? ' activeLink' : ''}`}>
+            {text}
+          </a>
+        </Link>
+      </li>
   )
 }
 

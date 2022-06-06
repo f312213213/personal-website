@@ -17,7 +17,7 @@ const About = () => {
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             During my free time I like going gym, doing Bench Press. You can also find some cool music festival live on my
-            <a href={userData.aboutPage.mainSocial.link} target={'_blank'} className={'font-bold'} rel="noreferrer">{userData.aboutPage.mainSocial.type}</a>.
+            <a href={userData.aboutPage.mainSocial.link} target={'_blank'} className={'font-bold'} rel="noreferrer"> {userData.aboutPage.mainSocial.type}</a>.
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
             You can find my cv when you click <a target={'_blank'}
