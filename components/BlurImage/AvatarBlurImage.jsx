@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const BlurImage = ({ src, alt }) => {
+const AvatarBlurImage = ({ src, alt, priority }) => {
   const [isLoading, setLoading] = React.useState(true)
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ')
@@ -18,9 +18,10 @@ const BlurImage = ({ src, alt }) => {
           objectFit={'contain'}
           src={src}
           alt={alt}
+          priority={priority ?? false}
           onLoadingComplete={() => { setLoading(false) }}
       />
   )
 }
 
-export default BlurImage
+export default AvatarBlurImage

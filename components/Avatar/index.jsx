@@ -9,6 +9,7 @@ const Avatar = () => {
         <AvatarBlurImage
             src={userData.general.avatar}
             alt={userData.homePage.slogan}
+            priority={true}
         />
       </div>
   )

@@ -6,12 +6,14 @@ import Page from '@/components/Page'
 import PostBlurImage from '@/components/BlurImage/PostBlurImage'
 import ShareLinks from '@/components/ShareLinks'
 import AuthorBlurImage from '@/components/BlurImage/AuthorBlurImage'
+import H2 from '@/components/H2'
+import ToC from '@/components/ToC'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
 )
 
-const Post = ({ post, content }) => {
+const Post = ({ post, content, anchor }) => {
   return (
       <Page
           title={`${post.title} - David`}
@@ -21,7 +23,7 @@ const Post = ({ post, content }) => {
           date={post.datePost}
           author={post.author.username}
       >
-        <article className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4 text-left">
+        <article className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4 text-left ">
           <h1>{post.title}</h1>
           <section className={'flex items-center space-x-2 text-sm'}>
             <AuthorBlurImage src={post.author.avatar.url} />
@@ -29,13 +31,15 @@ const Post = ({ post, content }) => {
               {post.author.username} / {post.datePost}
             </p>
           </section>
+          <ToC anchor={anchor} />
           <ShareLinks title={post.title} />
-          <PostBlurImage src={post.coverPhoto.url} alt={post.title} height={post.coverPhoto.height} width={post.coverPhoto.width} />
+          <PostBlurImage src={post.coverPhoto.url} alt={post.title} height={post.coverPhoto.height} width={post.coverPhoto.width} priority={true} />
           <RichText
               content={content}
               renderers={{
-                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} />,
-                a: ({ children, href }) => <a href={href} target={'_blank'} rel="noreferrer">{children}</a>
+                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} priority={false} />,
+                a: ({ children, href }) => <a href={href} target={'_blank'} rel="noreferrer">{children}</a>,
+                h2: ({ children }) => <H2>{children}</H2>
               }}
           />
         </article>
@@ -73,7 +77,10 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       post: posts[0],
-      content: posts[0].content.raw
+      content: posts[0].content.raw,
+      anchor: posts[0].content.raw.children
+        .filter(children => (children.type === 'heading-two'))
+        .map(h2 => (h2.children[0].text))
     }
   }
 }
