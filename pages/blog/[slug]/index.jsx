@@ -8,6 +8,8 @@ import ShareLinks from '@/components/ShareLinks'
 import AuthorBlurImage from '@/components/BlurImage/AuthorBlurImage'
 import H2 from '@/components/H2'
 import ToC from '@/components/ToC'
+import { IoLanguageSharp } from 'react-icons/io5'
+import LocalizeMenu from '@/components/LocalizeMenu'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
@@ -30,6 +32,7 @@ const Post = ({ post, content, anchor }) => {
             <p>
               {post.author.username} / {post.datePost}
             </p>
+            <LocalizeMenu />
           </section>
           <ToC anchor={anchor} />
           <ShareLinks title={post.title} />
