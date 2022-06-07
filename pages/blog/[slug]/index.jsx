@@ -47,10 +47,10 @@ const Post = ({ post, content, anchor }) => {
   )
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params, locale }) => {
   const QUERY_POST = gql`
   {
-    posts(where: {slug: "${params.slug}"}) {
+    posts(where: {slug: "${params.slug}"}, locales: ${locale}) {
       title
       datePost
       slug
@@ -85,7 +85,7 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async ({ locales }) => {
   const QUERY_POSTS = gql`
   {
     posts {
@@ -94,8 +94,14 @@ export const getStaticPaths = async () => {
   }
 `
   const { posts } = await graphCms.request(QUERY_POSTS)
+  const paths = posts
+    .map((post) => locales.map((locale) => ({
+      params: { slug: post.slug },
+      locale
+    })))
+    .flat()
   return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
+    paths,
     fallback: false
   }
 }

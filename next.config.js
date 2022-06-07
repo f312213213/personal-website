@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['media.graphassets.com']
   },
   i18n: {
-    locales: ['en'],
+    locales: ['en', 'zh'],
     defaultLocale: 'en'
   }
 }

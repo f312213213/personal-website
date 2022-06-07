@@ -29,14 +29,14 @@ const BLog = ({ posts }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const graphCms = new GraphQLClient(
     'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
   )
 
   const QUERY = gql`
       {
-        posts(orderBy: datePost_DESC) {
+        posts(orderBy: datePost_DESC, locales: ${locale}) {
           title
           id
           keyword
