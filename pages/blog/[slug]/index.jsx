@@ -24,7 +24,7 @@ const Post = ({ post, content, anchor }) => {
           author={post.author.username}
       >
         <article className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4 text-left font-sans">
-          <h1>{post.title}</h1>
+          <h1 className={'text-3xl sm:text-4xl'}>{post.title}</h1>
           <section className={'flex items-center space-x-2 text-sm'}>
             <AuthorBlurImage src={post.author.avatar.url} />
             <p>
