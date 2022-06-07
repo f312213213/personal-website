@@ -64,8 +64,8 @@ const Page = ({ children, ...customMeta }) => {
             meta.keyword && <meta name="keywords" content={meta.keyword} />
           }
         </Head>
-        <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'min-h-screen w-full relative px-8 flex justify-center text-center dark:bg-[#121212] transition duration-200'}>
-          <div className={'max-w-2xl mx-auto scroll-smooth'}>
+        <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'min-h-screen w-full relative px-8 flex justify-center text-center dark:bg-[#121212] '}>
+          <div className={'sm:max-w-2xl max-w-xs mx-auto scroll-smooth'}>
             {children}
           </div>
         </motion.main>

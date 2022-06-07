@@ -8,6 +8,8 @@ import ShareLinks from '@/components/ShareLinks'
 import AuthorBlurImage from '@/components/BlurImage/AuthorBlurImage'
 import H2 from '@/components/H2'
 import ToC from '@/components/ToC'
+import { IoLanguageSharp } from 'react-icons/io5'
+import LocalizeMenu from '@/components/LocalizeMenu'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
@@ -23,13 +25,14 @@ const Post = ({ post, content, anchor }) => {
           date={post.datePost}
           author={post.author.username}
       >
-        <article className="prose prose-lg mt-20 dark:prose-invert max-w-none mt-4 text-left ">
-          <h1>{post.title}</h1>
+        <article className="prose prose-lg sm:mt-20 dark:prose-invert text-left">
+          <h1 className={'text-3xl sm:text-4xl'}>{post.title}</h1>
           <section className={'flex items-center space-x-2 text-sm'}>
             <AuthorBlurImage src={post.author.avatar.url} />
             <p>
               {post.author.username} / {post.datePost}
             </p>
+            <LocalizeMenu />
           </section>
           <ToC anchor={anchor} />
           <ShareLinks title={post.title} />
@@ -47,10 +50,10 @@ const Post = ({ post, content, anchor }) => {
   )
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params, locale }) => {
   const QUERY_POST = gql`
   {
-    posts(where: {slug: "${params.slug}"}) {
+    posts(where: {slug: "${params.slug}"}, locales: ${locale}) {
       title
       datePost
       slug
@@ -85,7 +88,7 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async ({ locales }) => {
   const QUERY_POSTS = gql`
   {
     posts {
@@ -94,8 +97,14 @@ export const getStaticPaths = async () => {
   }
 `
   const { posts } = await graphCms.request(QUERY_POSTS)
+  const paths = posts
+    .map((post) => locales.map((locale) => ({
+      params: { slug: post.slug },
+      locale
+    })))
+    .flat()
   return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
+    paths,
     fallback: false
   }
 }

@@ -30,7 +30,7 @@ const LinkCard = ({ type, latest }) => {
             </h1>
             <div className="font-semibold flex flex-row space-x-2 w-full items-center ">
               <p>View Repository </p>
-              <div className="transform  group-hover:translate-x-2 transition duration-300">
+              <div>
                 &rarr;
               </div>
             </div>

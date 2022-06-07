@@ -8,7 +8,7 @@ const NavLink = ({ path, text }) => {
   return (
       <li>
         <Link href={path}>
-          <a className={`transition text-sm border-b border-transparent hover:border-gray-400${router.asPath.includes(path) ? ' activeLink' : ''}`}>
+          <a className={`text-sm border-b border-transparent py-1 hover:border-gray-400${router.asPath.includes(path) ? ' activeLink' : ''}`}>
             {text}
           </a>
         </Link>
