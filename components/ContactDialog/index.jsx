@@ -69,8 +69,8 @@ const ContactDialog = () => {
                 exit={{
                   opacity: 0
                 }}
-                className={'fixed flex justify-center items-center w-full h-screen z-50 bg-gray-300 dark:bg-gray-500 bg-opacity-80 dark:bg-opacity-80'} onClick={handleClose} ref={wrapperRef}>
-              <form className="form w-11/12 sm:w-[32rem] rounded-lg bg-white dark:bg-gray-700 p-4 flex flex-col shadow-xl">
+                className={'fixed top-0 flex justify-center items-center w-full h-screen z-50 bg-gray-300 dark:bg-gray-500 bg-opacity-80 dark:bg-opacity-90'} onClick={handleClose} ref={wrapperRef}>
+              <form className="form w-11/12 sm:w-[32rem] rounded-lg bg-white dark:bg-gray-700 p-4 flex flex-col shadow-2xl">
                 <label htmlFor="name" className="text-sm text-gray-600 dark:text-gray-50 mx-4">
                   Your Name
                 </label>

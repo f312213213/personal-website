@@ -8,7 +8,7 @@ import userData from '@/constant/userData'
 const About = () => {
   return (
       <Page title={'About - David'} description={'I\'m a student and frontend developer living in Taipei. You can find more information on this page.'}>
-        <div className={'mt-20 flex flex-col space-y-8 justify-center mb-16'}>
+        <div className={'sm:mt-20 flex flex-col space-y-8 justify-center '}>
           <h1 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Student with Passionate
           </h1>
@@ -25,7 +25,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
+        <div className={'mt-20 flex flex-col space-y-8 justify-center items-center'}>
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>
             Technologies I frequently use
           </h2>
@@ -36,7 +36,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className={'mt-20 flex flex-col space-y-8 justify-center items-center mb-16'}>
+        <div className={'mt-20 flex flex-col space-y-8 justify-center items-center'}>
           <h2 className={'text-black text-2xl font-extrabold dark:text-gray-50'}>
             Experiences
           </h2>

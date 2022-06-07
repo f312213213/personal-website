@@ -5,7 +5,7 @@ import { MdOutlineCloudQueue } from 'react-icons/md'
 
 export default {
   homePage: {
-    slogan: 'I build website.',
+    slogan: 'I Build Website.',
     introduction: 'I am a self-motivated student in CS area, seeking for an intern position. Hoping to learn more about web or software development in real business production.'
   },
   aboutPage: {

@@ -15,7 +15,7 @@ const AvatarBlurImage = ({ src, alt, priority }) => {
               : 'scale-100 blur-0 grayscale-0'
           )}
           layout={'fill'}
-          objectFit={'contain'}
+          objectFit={'cover'}
           src={src}
           alt={alt}
           priority={priority ?? false}

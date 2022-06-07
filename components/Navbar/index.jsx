@@ -21,8 +21,8 @@ const Navbar = () => {
 
   return (
       <>
-        <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={'transition duration-200 justify-between sm:justify-around items-center px-8 w-full flex text-lg sm:mt-8 dark:opacity-70 dark:bg-[#121212]'}>
-          <ul className={'flex space-x-4 items-baseline hidden sm:flex'}>
+        <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={' justify-between sm:justify-around items-center px-8 w-full flex text-lg sm:mt-8 dark:opacity-70 dark:bg-[#121212]'}>
+          <ul className={'flex space-x-4 items-baseline hidden sm:flex z-50'}>
             <Home />
             <NavLink text={'About'} path={'/about'} />
             <NavLink text={'Blog'} path={'/blog'} />

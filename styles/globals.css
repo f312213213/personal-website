@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-    @apply scroll-smooth
+    @apply scroll-smooth transition
 }
 
 .activeLink {
@@ -12,10 +12,6 @@ html {
 
 .footerContent {
     @apply text-black opacity-70
-}
-
-body {
-    @apply font-mono
 }
 
 .hide {
