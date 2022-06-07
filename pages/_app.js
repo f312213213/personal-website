@@ -20,7 +20,6 @@ function App ({ Component, pageProps }) {
           </AnimatePresence>
           <Footer />
         </ContactDialogProvider>
-        <ToggleDarkMode />
       </ThemeProvider>
   )
 }

@@ -14,7 +14,7 @@ const ToggleDarkMode = () => {
   return (
       <motion.button
           type={'button'}
-          className={'fixed hidden sm:block rounded-full p-4 bottom-4 right-4 text-2xl text-yellow-400 dark:bg-gray-50 bg-black hover:animate-spin'}
+          className={'rounded-full text-2xl text-yellow-400 hover:animate-spin z-50'}
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           whileHover={{ rotate: [360, 0] }}
       >
