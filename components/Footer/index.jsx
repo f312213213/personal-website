@@ -9,7 +9,7 @@ import FooterContact from '@/components/Footer/components/FooterContact'
 
 const Footer = ({ isNav }) => {
   return (
-      <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'transition duration-200 p-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
+      <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'transition duration-200 px-5 flex flex-col items-center justify-center w-full text-black dark:bg-[#121212] dark:text-white text-opacity-70 text-lg'}>
 
         {
           !isNav && <Spotify />
