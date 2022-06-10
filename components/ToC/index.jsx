@@ -10,7 +10,7 @@ const ToC = ({ anchor }) => {
             {
               anchor.map(a => (
                   <li key={a}>
-                    <a href={`#${a}`}>{a}</a>
+                    <a href={`#${a.replace(/ /g, '-').toLowerCase()}`}>{a}</a>
                   </li>
               ))
             }

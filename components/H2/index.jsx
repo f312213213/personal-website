@@ -2,8 +2,8 @@ import React from 'react'
 
 const H2 = ({ children }) => {
   return (
-      <h2 id={children.props.content[0].text} className={'hover:after:content-["#"] after:ml-1 after:prose-lg relative'}>
-        <a href={`#${children.props.content[0].text}`} className={'border-none w-full absolute h-full'} />
+      <h2 id={children.props.content[0].text.replace(/ /g, '-').toLowerCase()} className={'hover:after:content-["#"] after:ml-1 after:prose-lg relative'}>
+        <a href={`#${children.props.content[0].text.replace(/ /g, '-').toLowerCase()}`} className={'border-none w-full absolute h-full'} />
         {children}
       </h2>
   )
