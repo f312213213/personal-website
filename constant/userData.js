@@ -58,19 +58,19 @@ export default {
     ],
     experience: [
       {
+        companyName: 'LangLive',
+        timeLine: '2022/6 - Now',
+        description: 'My first full time intern job in the industry.'
+      },
+      {
         companyName: 'dimorder',
-        timeLine: '2022 - Now',
+        timeLine: '2022/2 - Now',
         description: 'Designed and built a delivery platform for customer in HK, which reported by several media.'
       },
       {
         companyName: 'GDSC - NTPU',
-        timeLine: '2021 - Now',
+        timeLine: '2021/8 - 2022/6',
         description: 'Lead a community in my college, introduce google products, basic programming skills to other students.'
-      },
-      {
-        companyName: 'NTPU',
-        timeLine: '2019 - Now',
-        description: 'Major in computer science.'
       }
     ],
     mainSocial: {
