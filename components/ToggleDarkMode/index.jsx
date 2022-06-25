@@ -11,6 +11,14 @@ const ToggleDarkMode = () => {
     setMounted(true)
   }, [])
 
+  React.useEffect(() => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }, [])
+
   return (
       <motion.button
           type={'button'}
