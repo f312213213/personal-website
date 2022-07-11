@@ -60,7 +60,7 @@ export default {
       {
         companyName: 'LangLive',
         timeLine: '2022/6 - Now',
-        description: 'My first full time intern job in the industry.'
+        description: 'Maintain web version of the largest streaming platform in Taiwan.'
       },
       {
         companyName: 'dimorder',
