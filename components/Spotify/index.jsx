@@ -13,7 +13,7 @@ const Spotify = () => {
   const getNowPlaying = async () => {
     setLoading(true)
     try {
-      const response = await fetch('https://asia-east1-get-current-spotify-song.cloudfunctions.net/now-playing')
+      const response = await fetch('/api/spotify')
       const song = await response.json()
       setSongData(song)
       setLoading(false)
@@ -33,7 +33,7 @@ const Spotify = () => {
             <SiSpotify />
           </a>
           {
-            !loading && songData.is_playing && songData.currently_playing_type === 'track'
+            !loading && songData.isPlaying
               ? <NowPlaying songData={songData} />
               : loading
                 ? <NowPlayingLoader />
@@ -43,7 +43,7 @@ const Spotify = () => {
             <MdAutorenew />
           </button>
           <div className={'absolute -top-10 transform transition scale-0 group-hover:scale-100 bg-[#121212] dark:bg-gray-50 dark:text-[#121212]  text-gray-50 rounded text-sm p-2'}>
-            Currently {!songData.is_playing && 'not'} Playing!
+            Currently {!songData.isPlaying && 'not'} Playing!
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@ export default {
       {
         companyName: 'dimorder',
         timeLine: '2022/2 - Now',
-        description: 'Designed and built a delivery platform for customer in HK, which reported by several media.'
+        description: 'Maintain a delivery platform for customer in HK, which reported by several media.'
       },
       {
         companyName: 'GDSC - NTPU',
