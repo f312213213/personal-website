@@ -3,13 +3,13 @@ import { gql, GraphQLClient } from 'graphql-request'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 
 import Page from '@/components/Page'
-import PostBlurImage from '@/components/BlurImage/PostBlurImage'
 import ShareLinks from '@/components/ShareLinks'
 import AuthorBlurImage from '@/components/BlurImage/AuthorBlurImage'
 import H2 from '@/components/H2'
 import ToC from '@/components/ToC'
 import { IoLanguageSharp } from 'react-icons/io5'
 import LocalizeMenu from '@/components/LocalizeMenu'
+import BlurImage from '@/components/BlurImage'
 
 const graphCms = new GraphQLClient(
   'https://api-ap-northeast-1.graphcms.com/v2/cl3o4oihs4ln601z1cvixb8fj/master'
@@ -25,7 +25,7 @@ const Post = ({ post, content, anchor }) => {
           date={post.datePost}
           author={post.author.username}
       >
-        <article className="prose prose-lg sm:mt-20 dark:prose-invert text-left">
+        <article className="prose prose-lg my-20 dark:prose-invert text-left">
           <h1 className={'text-3xl sm:text-4xl'}>{post.title}</h1>
           <section className={'flex items-center space-x-2 text-sm'}>
             <AuthorBlurImage src={post.author.avatar.url} />
@@ -36,11 +36,11 @@ const Post = ({ post, content, anchor }) => {
           </section>
           <ToC anchor={anchor} />
           <ShareLinks title={post.title} />
-          <PostBlurImage src={post.coverPhoto.url} alt={post.title} height={post.coverPhoto.height} width={post.coverPhoto.width} priority={true} />
+          <BlurImage src={post.coverPhoto.url} alt={post.title} height={post.coverPhoto.height} width={post.coverPhoto.width} priority={true} />
           <RichText
               content={content}
               renderers={{
-                img: ({ src, title, height, width }) => <PostBlurImage src={src} alt={title} height={height} width={width} priority={false} />,
+                img: ({ src, title, height, width }) => <BlurImage src={src} alt={title} height={height} width={width} priority={false} />,
                 a: ({ children, href }) => <a href={href} target={'_blank'} rel="noreferrer">{children}</a>,
                 h2: ({ children }) => <H2>{children}</H2>
               }}

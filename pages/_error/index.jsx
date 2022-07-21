@@ -4,7 +4,7 @@ import Page from '@/components/Page'
 function Error ({ statusCode }) {
   return (
       <Page title={`${statusCode} - David`}>
-        <div className={'w-full h-screen flex justify-center items-center'}>
+        <div className={'w-full h-screen flex-center'}>
           <h1 className={'text-4xl'}>
             There Is A {statusCode} Error!
           </h1>

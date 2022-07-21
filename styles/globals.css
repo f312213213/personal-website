@@ -25,3 +25,11 @@ html {
 .spin {
     @apply animate-spin
 }
+
+.flex-center {
+    @apply flex justify-center items-center
+}
+
+.post-link-card img {
+    @apply duration-700 ease-in-out  transform group-hover:scale-[1.3]
+}

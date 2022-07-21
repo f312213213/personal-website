@@ -8,7 +8,7 @@ import CardLoader from '@/components/LinkCard/CardLoader'
 const BLog = ({ posts }) => {
   return (
       <Page title={'My Blog - David'} description={'You can find some posts by me on this page.'}>
-        <div className={'sm:mt-20 mb-10 flex flex-col space-y-8 justify-center items-center mb-16'}>
+        <div className={'mt-20 flex-col space-y-8 flex-center'}>
           <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             My Blog
           </h2>
@@ -16,7 +16,7 @@ const BLog = ({ posts }) => {
             Here are some posts by me, wanna see more?
           </p>
         </div>
-        <div className={'grid mx-auto my-10 w-auto h-auto gap-8 grid-cols-1 md:grid-cols-2'}>
+        <div className={'grid mx-auto my-10 gap-8 grid-cols-1 md:grid-cols-2'}>
           {
             posts
               ? posts.map((latestPost) => (

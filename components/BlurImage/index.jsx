@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const PostBlurImage = (props) => {
+const BlurImage = (props) => {
   const [isLoading, setLoading] = React.useState(true)
   const cn = (...classes) => {
     return classes.filter(Boolean).join(' ')
@@ -9,7 +9,7 @@ const PostBlurImage = (props) => {
 
   return (
       <Image
-          className={cn('duration-700 ease-in-out',
+          className={cn('duration-700 ease-in-out ',
             isLoading
               ? 'scale-110 blur-2xl grayscale'
               : 'scale-100 blur-0 grayscale-0'
@@ -21,4 +21,4 @@ const PostBlurImage = (props) => {
   )
 }
 
-export default PostBlurImage
+export default BlurImage

@@ -65,7 +65,7 @@ const Page = ({ children, ...customMeta }) => {
           }
         </Head>
         <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={'min-h-screen w-full relative px-8 flex justify-center text-center dark:bg-[#121212] '}>
-          <div className={'sm:max-w-2xl max-w-xs mx-auto scroll-smooth'}>
+          <div className={'max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl mx-auto scroll-smooth'}>
             {children}
           </div>
         </motion.main>

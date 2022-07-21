@@ -22,7 +22,7 @@ const Projects = () => {
   }, [])
   return (
       <Page title={'Projects - David'} description={'Here are my recent works. Or you can find my github link inside!'}>
-        <div className={'sm:mt-20 mb-10 flex flex-col space-y-8 justify-center items-center mb-16'}>
+        <div className={'mt-20 flex-col space-y-8 flex-center'}>
           <h2 className={'text-black text-4xl font-extrabold dark:text-gray-50'}>
             Latest Code
           </h2>
@@ -32,7 +32,7 @@ const Projects = () => {
           <BigLinkButton text={'View My Github'} path={`https://github.com/${userData.general.socialID.github}`} newtab />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto my-10">
           {
             repos
               ? repos.map((latestRepo) => (
