@@ -19,7 +19,7 @@ const LocalizeMenu = () => {
               <IoLanguageSharp />
             </DropdownMenu.Trigger>
 
-            <DropdownMenu.Content className={'bg-[#121212] dark:bg-gray-50 text-gray-50 dark:text-[#121212] p-2 rounded-xl sm:-top-8 relative'}>
+            <DropdownMenu.Content className={'bg-[#121212] dark:bg-gray-50 text-gray-50 dark:text-[#121212] p-2 rounded-xl relative'}>
               <>
                 <DropdownMenu.Arrow className={'fill-[#121212] dark:fill-gray-50'} />
                 <DropdownMenu.Item>
