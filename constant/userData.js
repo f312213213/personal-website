@@ -59,17 +59,20 @@ export default {
     experience: [
       {
         companyName: 'LangLive',
+        title: 'Assistant Engineer',
         timeLine: '2022/6 - Now',
         description: 'Maintain web version of the largest streaming platform in Taiwan.'
       },
       {
         companyName: 'dimorder',
         timeLine: '2022/2 - Now',
+        title: 'Frontend Developer',
         description: 'Maintain a delivery platform for customer in HK, which reported by several media.'
       },
       {
         companyName: 'GDSC - NTPU',
         timeLine: '2021/8 - 2022/6',
+        title: 'Lead',
         description: 'Lead a community in my college, introduce google products, basic programming skills to other students.'
       }
     ],

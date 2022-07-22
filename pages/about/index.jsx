@@ -20,8 +20,8 @@ const About = () => {
             <a href={userData.aboutPage.mainSocial.link} target={'_blank'} className={'font-bold'} rel="noreferrer"> {userData.aboutPage.mainSocial.type}</a>.
           </p>
           <p className={'text-black opacity-70 dark:text-gray-50 sm:text-left'}>
-            You can find my cv when you click <a target={'_blank'}
-              href={userData.aboutPage.cvLink} className={'font-bold'} rel="noreferrer">me</a>.
+            You can always get my cv on <a target={'_blank'}
+              href={userData.aboutPage.cvLink} className={'font-bold'} rel="noreferrer">here</a>.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const About = () => {
           </h2>
           <ul className={'flex flex-col divide-y'}>
             {
-              userData.aboutPage.experience.map(e => <ExperienceRow key={e.companyName} companyName={e.companyName} timeLine={e.timeLine} description={e.description} />)
+              userData.aboutPage.experience.map(e => <ExperienceRow key={e.companyName} companyName={e.companyName} title={e.title} timeLine={e.timeLine} description={e.description} />)
             }
           </ul>
         </div>
