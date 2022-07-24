@@ -6,7 +6,7 @@ import { MdOutlineCloudQueue } from 'react-icons/md'
 export default {
   homePage: {
     slogan: 'I Build Website.',
-    introduction: 'I am a self-motivated student in CS area, seeking for an intern position. Hoping to learn more about web or software development in real business production.'
+    introduction: 'I am a self-motivated student in CS area, seeking for an intern position. Hoping to learn more about software development in real business production.'
   },
   aboutPage: {
     frequentUseTech: [
@@ -61,7 +61,7 @@ export default {
         companyName: 'LangLive',
         title: 'Assistant Engineer',
         timeLine: '2022/6 - Now',
-        description: 'Maintain web version of the largest streaming platform in Taiwan.'
+        description: 'Maintain web version of the largest streaming platform in Taiwan. My first full time internship in the industry.'
       },
       {
         companyName: 'dimorder',
@@ -73,7 +73,7 @@ export default {
         companyName: 'GDSC - NTPU',
         timeLine: '2021/8 - 2022/6',
         title: 'Lead',
-        description: 'Lead a community in my college, introduce google products, basic programming skills to other students.'
+        description: 'Leading a community in my college. Introduce google products, basic programming skills to other students.'
       }
     ],
     mainSocial: {
